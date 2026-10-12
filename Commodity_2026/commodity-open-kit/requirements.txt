@@ -1,0 +1,16 @@
+# Commodity Open kit dependencies. Python 3.13. Install from the kit root.
+numpy==2.5.3
+pandas==3.0.5
+pyarrow==25.0.1
+scipy==1.18.1
+scikit-learn==1.9.1
+jupyterlab>=4.4
+nbconvert>=7.16
+ipykernel>=6.29
+# jupyterlab pulls in argon2-cffi-bindings. Its 26.x releases have no wheel for Intel Macs, where
+# pip would build them from source; the 25.x releases have one.
+argon2-cffi-bindings<26
+# The point-in-time client, validator, features, baselines, loop and organizer helpers, the
+# realized-swing inventory entries are scored against, and both scorers: the 2.6 one and the 2.4 one
+# it superseded.
+./swing_dataset

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use the Commodity Open pack or this kit, cite them as below."
+title: "Commodity Open 2026: participant kit"
+type: software
+version: "2.6.2"
+date-released: "2026-10-06"
+license: Apache-2.0
+authors:
+  - name: "Commodity Open 2026 organizers"
+    email: "contact@commodity-open.xyz"
+references:
+  - type: dataset
+    title: "Commodity Open 2026 dataset pack v2.0.1"
+    version: "2.0.1"
+    date-released: "2026-10-05"
+    identifiers:
+      - type: other
+        value: "MANIFEST.json sha256: 3f3ff527078fbaabf3d76bac70aee38eb1ee87f0a32c8dd84c65aa64c883e97a"
+        description: "sha256 of the pack manifest that lists every file with its own sha256"
+    authors:
+      - name: "Commodity Open 2026 organizers"
+        email: "contact@commodity-open.xyz"
+    notes: "Four MCX commodity futures (gold, silver, copper, crude oil) with dated-contract daily history, intraday quotes, comparator venues, news, release calendar vintages, macro vintages, positioning, FX and session calendars, to the close of Fri 25 Sep 2026 (USD/INR to Fri 18 Sep); every row carries its availability clock. Licensed to registered teams for use in Commodity Open 2026 only; no sharing or redistribution until the verdicts are sent."

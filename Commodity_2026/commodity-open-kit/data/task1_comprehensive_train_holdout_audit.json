@@ -1,0 +1,668 @@
+{
+  "metadata": {
+    "target_multiplier": 0.75,
+    "train_window": "2021-02-01 03:00:00+00:00 to 2026-05-31 18:00:00+00:00",
+    "holdout_window": "2026-06-01 00:00:00+00:00 to 2026-09-25 18:00:00+00:00",
+    "assets": [
+      "gold",
+      "silver",
+      "copper",
+      "crude"
+    ]
+  },
+  "classifiers_ml": {
+    "gold": {
+      "classes": [
+        "down_swing",
+        "no_swing",
+        "up_swing"
+      ],
+      "train": {
+        "samples": 1350,
+        "accuracy": 80.52,
+        "log_loss": 0.7015,
+        "macro_f1": 80.4,
+        "macro_precision": 80.28,
+        "macro_recall": 80.94,
+        "weighted_f1": 80.6,
+        "per_class": {
+          "down_swing": {
+            "precision": 77.11,
+            "recall": 82.75,
+            "f1-score": 79.83,
+            "support": 342
+          },
+          "no_swing": {
+            "precision": 75.45,
+            "recall": 82.78,
+            "f1-score": 78.95,
+            "support": 453
+          },
+          "up_swing": {
+            "precision": 88.27,
+            "recall": 77.3,
+            "f1-score": 82.42,
+            "support": 555
+          }
+        },
+        "confusion_matrix": [
+          [
+            283,
+            41,
+            18
+          ],
+          [
+            39,
+            375,
+            39
+          ],
+          [
+            45,
+            81,
+            429
+          ]
+        ]
+      },
+      "holdout": {
+        "samples": 81,
+        "accuracy": 51.85,
+        "log_loss": 0.8867,
+        "macro_f1": 34.43,
+        "macro_precision": 39.86,
+        "macro_recall": 39.31,
+        "weighted_f1": 48.25,
+        "per_class": {
+          "down_swing": {
+            "precision": 73.68,
+            "recall": 30.43,
+            "f1-score": 43.08,
+            "support": 46
+          },
+          "no_swing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 3
+          },
+          "up_swing": {
+            "precision": 45.9,
+            "recall": 87.5,
+            "f1-score": 60.22,
+            "support": 32
+          }
+        },
+        "confusion_matrix": [
+          [
+            14,
+            1,
+            31
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            4,
+            0,
+            28
+          ]
+        ]
+      }
+    },
+    "silver": {
+      "classes": [
+        "down_swing",
+        "no_swing",
+        "up_swing"
+      ],
+      "train": {
+        "samples": 1350,
+        "accuracy": 67.93,
+        "log_loss": 0.8892,
+        "macro_f1": 65.85,
+        "macro_precision": 64.59,
+        "macro_recall": 72.06,
+        "weighted_f1": 68.66,
+        "per_class": {
+          "down_swing": {
+            "precision": 73.62,
+            "recall": 65.34,
+            "f1-score": 69.23,
+            "support": 551
+          },
+          "no_swing": {
+            "precision": 43.27,
+            "recall": 84.91,
+            "f1-score": 57.32,
+            "support": 159
+          },
+          "up_swing": {
+            "precision": 76.87,
+            "recall": 65.94,
+            "f1-score": 70.98,
+            "support": 640
+          }
+        },
+        "confusion_matrix": [
+          [
+            360,
+            77,
+            114
+          ],
+          [
+            11,
+            135,
+            13
+          ],
+          [
+            118,
+            100,
+            422
+          ]
+        ]
+      },
+      "holdout": {
+        "samples": 81,
+        "accuracy": 46.91,
+        "log_loss": 0.9592,
+        "macro_f1": 30.79,
+        "macro_precision": 33.16,
+        "macro_recall": 31.67,
+        "weighted_f1": 45.61,
+        "per_class": {
+          "down_swing": {
+            "precision": 47.62,
+            "recall": 25.0,
+            "f1-score": 32.79,
+            "support": 40
+          },
+          "no_swing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1
+          },
+          "up_swing": {
+            "precision": 51.85,
+            "recall": 70.0,
+            "f1-score": 59.57,
+            "support": 40
+          }
+        },
+        "confusion_matrix": [
+          [
+            10,
+            5,
+            25
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            11,
+            1,
+            28
+          ]
+        ]
+      }
+    },
+    "copper": {
+      "classes": [
+        "down_swing",
+        "no_swing",
+        "up_swing"
+      ],
+      "train": {
+        "samples": 1350,
+        "accuracy": 60.81,
+        "log_loss": 0.8963,
+        "macro_f1": 60.26,
+        "macro_precision": 60.65,
+        "macro_recall": 65.1,
+        "weighted_f1": 61.12,
+        "per_class": {
+          "down_swing": {
+            "precision": 63.55,
+            "recall": 64.3,
+            "f1-score": 63.92,
+            "support": 507
+          },
+          "no_swing": {
+            "precision": 43.33,
+            "recall": 80.18,
+            "f1-score": 56.26,
+            "support": 227
+          },
+          "up_swing": {
+            "precision": 75.06,
+            "recall": 50.81,
+            "f1-score": 60.6,
+            "support": 616
+          }
+        },
+        "confusion_matrix": [
+          [
+            326,
+            98,
+            83
+          ],
+          [
+            24,
+            182,
+            21
+          ],
+          [
+            163,
+            140,
+            313
+          ]
+        ]
+      },
+      "holdout": {
+        "samples": 81,
+        "accuracy": 50.62,
+        "log_loss": 1.0382,
+        "macro_f1": 23.36,
+        "macro_precision": 18.72,
+        "macro_recall": 31.06,
+        "weighted_f1": 38.07,
+        "per_class": {
+          "down_swing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 29
+          },
+          "no_swing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 8
+          },
+          "up_swing": {
+            "precision": 56.16,
+            "recall": 93.18,
+            "f1-score": 70.09,
+            "support": 44
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            5,
+            24
+          ],
+          [
+            0,
+            0,
+            8
+          ],
+          [
+            2,
+            1,
+            41
+          ]
+        ]
+      }
+    },
+    "crude": {
+      "classes": [
+        "down_swing",
+        "no_swing",
+        "up_swing"
+      ],
+      "train": {
+        "samples": 1350,
+        "accuracy": 79.19,
+        "log_loss": 0.71,
+        "macro_f1": 77.66,
+        "macro_precision": 76.89,
+        "macro_recall": 82.23,
+        "weighted_f1": 79.84,
+        "per_class": {
+          "down_swing": {
+            "precision": 85.65,
+            "recall": 75.9,
+            "f1-score": 80.48,
+            "support": 527
+          },
+          "no_swing": {
+            "precision": 55.46,
+            "recall": 93.84,
+            "f1-score": 69.72,
+            "support": 211
+          },
+          "up_swing": {
+            "precision": 89.54,
+            "recall": 76.96,
+            "f1-score": 82.78,
+            "support": 612
+          }
+        },
+        "confusion_matrix": [
+          [
+            400,
+            77,
+            50
+          ],
+          [
+            8,
+            198,
+            5
+          ],
+          [
+            59,
+            82,
+            471
+          ]
+        ]
+      },
+      "holdout": {
+        "samples": 81,
+        "accuracy": 53.09,
+        "log_loss": 0.8772,
+        "macro_f1": 35.72,
+        "macro_precision": 35.59,
+        "macro_recall": 36.81,
+        "weighted_f1": 52.67,
+        "per_class": {
+          "down_swing": {
+            "precision": 45.24,
+            "recall": 59.38,
+            "f1-score": 51.35,
+            "support": 32
+          },
+          "no_swing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 2
+          },
+          "up_swing": {
+            "precision": 61.54,
+            "recall": 51.06,
+            "f1-score": 55.81,
+            "support": 47
+          }
+        },
+        "confusion_matrix": [
+          [
+            19,
+            0,
+            13
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            23,
+            0,
+            24
+          ]
+        ]
+      }
+    }
+  },
+  "regressors_ml": {
+    "gold": {
+      "train": {
+        "swings_count": 897,
+        "mae": 1.3068,
+        "rmse": 2.1401,
+        "r2": 0.225,
+        "medae": 0.7963,
+        "actual_mean_mfe": 2.569,
+        "predicted_mean_mfe": 2.381,
+        "pred_all_sessions_mean": 2.349,
+        "pred_min": 0.639,
+        "pred_max": 4.377
+      },
+      "holdout": {
+        "swings_count": 78,
+        "mae": 2.441,
+        "rmse": 2.7604,
+        "r2": -0.162,
+        "medae": 2.1183,
+        "actual_mean_mfe": 3.076,
+        "predicted_mean_mfe": 2.257,
+        "pred_all_sessions_mean": 2.26,
+        "pred_min": 0.887,
+        "pred_max": 3.791
+      }
+    },
+    "silver": {
+      "train": {
+        "swings_count": 1191,
+        "mae": 2.5565,
+        "rmse": 3.7198,
+        "r2": 0.1513,
+        "medae": 2.1858,
+        "actual_mean_mfe": 3.838,
+        "predicted_mean_mfe": 3.68,
+        "pred_all_sessions_mean": 3.675,
+        "pred_min": 1.894,
+        "pred_max": 6.132
+      },
+      "holdout": {
+        "swings_count": 80,
+        "mae": 3.3726,
+        "rmse": 4.1134,
+        "r2": -0.072,
+        "medae": 3.1491,
+        "actual_mean_mfe": 4.45,
+        "predicted_mean_mfe": 4.155,
+        "pred_all_sessions_mean": 4.161,
+        "pred_min": 2.427,
+        "pred_max": 5.049
+      }
+    },
+    "copper": {
+      "train": {
+        "swings_count": 1123,
+        "mae": 1.7164,
+        "rmse": 2.5966,
+        "r2": 0.1637,
+        "medae": 1.1059,
+        "actual_mean_mfe": 2.775,
+        "predicted_mean_mfe": 2.6,
+        "pred_all_sessions_mean": 2.579,
+        "pred_min": 0.774,
+        "pred_max": 4.126
+      },
+      "holdout": {
+        "swings_count": 73,
+        "mae": 1.6779,
+        "rmse": 2.133,
+        "r2": -0.0851,
+        "medae": 1.161,
+        "actual_mean_mfe": 2.548,
+        "predicted_mean_mfe": 3.084,
+        "pred_all_sessions_mean": 3.096,
+        "pred_min": 0.801,
+        "pred_max": 3.609
+      }
+    },
+    "crude": {
+      "train": {
+        "swings_count": 1139,
+        "mae": 3.57,
+        "rmse": 5.443,
+        "r2": 0.0807,
+        "medae": 3.2175,
+        "actual_mean_mfe": 5.278,
+        "predicted_mean_mfe": 5.146,
+        "pred_all_sessions_mean": 5.1,
+        "pred_min": 3.613,
+        "pred_max": 6.606
+      },
+      "holdout": {
+        "swings_count": 79,
+        "mae": 6.0855,
+        "rmse": 6.6696,
+        "r2": -0.1441,
+        "medae": 5.3222,
+        "actual_mean_mfe": 7.875,
+        "predicted_mean_mfe": 5.293,
+        "pred_all_sessions_mean": 5.293,
+        "pred_min": 4.348,
+        "pred_max": 6.417
+      }
+    }
+  },
+  "holdout_competition": {
+    "correctness": 60.9,
+    "depth": 69.47,
+    "catch_rate": 23.53,
+    "success_rate": 51.3,
+    "coverage": 95.29,
+    "counts": {
+      "signals_in_window": 162,
+      "invalid": 0,
+      "unmatured": 0,
+      "scored": 162,
+      "no_price": 0,
+      "ambiguous_bar": 0,
+      "scored_on_incomplete_window": 0,
+      "tick_priced": 0,
+      "decided": 156,
+      "undecided": 6,
+      "undecided_share": 0,
+      "recorded_not_scored_other_horizon": 0,
+      "correct": 95,
+      "deep": 66,
+      "swings_in_window": 187,
+      "swings_caught": 44,
+      "swings_straddling_window_start": 4,
+      "swings_straddling_window_end": 0,
+      "swings_outside_window": 1916,
+      "signal_rows": 162,
+      "valid_signal_rows": 162,
+      "invalid_signal_rows": 0,
+      "invalid_reasons": {},
+      "no_signal_rows": 162,
+      "valid_no_signal_rows": 162
+    },
+    "top_10_large_swings": {
+      "caught": 7,
+      "required": 7,
+      "top": 10
+    },
+    "per_asset": {
+      "gold": {
+        "signals": 37,
+        "decided": 36,
+        "correct": 22,
+        "deep": 17,
+        "correctness_pct": 61.11,
+        "depth_pct": 77.27,
+        "swings": 40,
+        "swings_caught": 11,
+        "catch_rate_pct": 27.5
+      },
+      "silver": {
+        "signals": 24,
+        "decided": 24,
+        "correct": 14,
+        "deep": 10,
+        "correctness_pct": 58.33,
+        "depth_pct": 71.43,
+        "swings": 56,
+        "swings_caught": 10,
+        "catch_rate_pct": 17.86
+      },
+      "copper": {
+        "signals": 61,
+        "decided": 56,
+        "correct": 34,
+        "deep": 20,
+        "correctness_pct": 60.71,
+        "depth_pct": 58.82,
+        "swings": 31,
+        "swings_caught": 10,
+        "catch_rate_pct": 32.26
+      },
+      "crude": {
+        "signals": 40,
+        "decided": 40,
+        "correct": 25,
+        "deep": 19,
+        "correctness_pct": 62.5,
+        "depth_pct": 76.0,
+        "swings": 60,
+        "swings_caught": 13,
+        "catch_rate_pct": 21.67
+      }
+    }
+  },
+  "train_competition": {
+    "correctness": 85.91,
+    "depth": 80.15,
+    "catch_rate": 34.92,
+    "success_rate": 66.99,
+    "counts": {
+      "signals": 2228,
+      "decided": 2164,
+      "correct": 1859,
+      "deep": 1490,
+      "swings_total": 1916,
+      "swings_caught": 669
+    },
+    "per_asset": {
+      "gold": {
+        "signals": 549,
+        "decided": 517,
+        "correct": 473,
+        "deep": 392,
+        "correctness_pct": 91.49,
+        "depth_pct": 82.88,
+        "swings_total": 339,
+        "swings_caught": 140,
+        "catch_rate_pct": 41.3
+      },
+      "silver": {
+        "signals": 503,
+        "decided": 495,
+        "correct": 404,
+        "deep": 310,
+        "correctness_pct": 81.62,
+        "depth_pct": 76.73,
+        "swings_total": 512,
+        "swings_caught": 143,
+        "catch_rate_pct": 27.93
+      },
+      "copper": {
+        "signals": 584,
+        "decided": 564,
+        "correct": 449,
+        "deep": 364,
+        "correctness_pct": 79.61,
+        "depth_pct": 81.07,
+        "swings_total": 529,
+        "swings_caught": 178,
+        "catch_rate_pct": 33.65
+      },
+      "crude": {
+        "signals": 592,
+        "decided": 588,
+        "correct": 533,
+        "deep": 424,
+        "correctness_pct": 90.65,
+        "depth_pct": 79.55,
+        "swings_total": 536,
+        "swings_caught": 208,
+        "catch_rate_pct": 38.81
+      }
+    }
+  },
+  "generalization_gap": {
+    "correctness_diff": 25.01,
+    "depth_diff": 10.68,
+    "catch_rate_diff": 11.39,
+    "success_rate_diff": 15.69
+  }
+}

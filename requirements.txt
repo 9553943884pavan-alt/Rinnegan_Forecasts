@@ -1,0 +1,22 @@
+# Rinnegan Forecasts - Commodity Open 2026 Dependencies
+# Python >= 3.10
+
+# Core Machine Learning & Scientific Computing
+numpy>=2.0.0
+pandas>=2.2.0
+scipy>=1.14.0
+scikit-learn>=1.5.0
+lightgbm>=4.3.0
+pyarrow>=17.0.0
+
+# Natural Language Processing & Sentiment Analysis
+transformers>=4.40.0
+torch>=2.2.0
+
+# HTTP & API Requests
+requests>=2.31.0
+
+# Notebooks & Development
+jupyterlab>=4.2.0
+ipykernel>=6.29.0
+nbconvert>=7.16.0

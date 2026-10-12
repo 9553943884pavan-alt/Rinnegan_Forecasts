@@ -1,0 +1,129 @@
+{
+  "built_utc": "2026-10-11T13:06:22.117350+00:00",
+  "total_commodities": 4,
+  "input_feature_count": 60,
+  "input_features": [
+    "eligible",
+    "p_ref",
+    "sigma_c",
+    "n_returns",
+    "has_features",
+    "ret_1",
+    "ret_5",
+    "ret_20",
+    "rv_20",
+    "stretch_20",
+    "z_1",
+    "z_5",
+    "z_20",
+    "log_rv_20",
+    "oi_1s_change",
+    "oi_5s_change",
+    "oi_class_longs",
+    "oi_class_short_cov",
+    "oi_class_shorts",
+    "oi_class_liquid",
+    "range_ratio",
+    "range_expansion_ratio",
+    "close_pos_in_range",
+    "tr_pct",
+    "atr_5d",
+    "vol_surge_10d",
+    "vol_chg_1d",
+    "log_volume",
+    "dist_5d_high",
+    "dist_5d_low",
+    "cot_net_smart_money",
+    "cot_weekly_change",
+    "cot_crowded_trade",
+    "usdinr_fbil",
+    "usdinr_ret_1d",
+    "usdinr_ret_5d",
+    "hl_ret_1d",
+    "hl_ret_5d",
+    "hl_funding",
+    "macro_events_next_24h",
+    "energy_events_next_24h",
+    "inflation_events_next_24h",
+    "central_bank_events_next_24h",
+    "rv_5",
+    "vol_term_structure",
+    "volatility_regime",
+    "vol_rv_interaction",
+    "ret_trend_agreement",
+    "oi_momentum_interaction",
+    "cot_price_divergence",
+    "fx_momentum_interaction",
+    "dow_sin",
+    "dow_cos",
+    "is_news_exist",
+    "news_count_24h",
+    "finbert_sentiment_mean_24h",
+    "finbert_sentiment_sum_24h",
+    "news_pos_share_24h",
+    "news_neg_share_24h",
+    "sentiment_trend_interaction"
+  ],
+  "commodities": {
+    "gold": {
+      "rows": 1431,
+      "classifier_file": "task1_classifier_gold.parquet",
+      "regressor_file": "task1_regressor_gold.parquet",
+      "feature_count": 60,
+      "class_distribution": {
+        "no_swing": 599,
+        "up_swing": 507,
+        "down_swing": 325
+      },
+      "swing_count": 832,
+      "mean_favorable_mfe_pct": 3.252155869375377
+    },
+    "silver": {
+      "rows": 1431,
+      "classifier_file": "task1_classifier_silver.parquet",
+      "regressor_file": "task1_regressor_silver.parquet",
+      "feature_count": 60,
+      "class_distribution": {
+        "no_swing": 556,
+        "up_swing": 465,
+        "down_swing": 410
+      },
+      "swing_count": 875,
+      "mean_favorable_mfe_pct": 5.8200292702081375
+    },
+    "copper": {
+      "rows": 1431,
+      "classifier_file": "task1_classifier_copper.parquet",
+      "regressor_file": "task1_regressor_copper.parquet",
+      "feature_count": 60,
+      "class_distribution": {
+        "no_swing": 600,
+        "up_swing": 456,
+        "down_swing": 375
+      },
+      "swing_count": 831,
+      "mean_favorable_mfe_pct": 4.03802410610125
+    },
+    "crude": {
+      "rows": 1431,
+      "classifier_file": "task1_classifier_crude.parquet",
+      "regressor_file": "task1_regressor_crude.parquet",
+      "feature_count": 60,
+      "class_distribution": {
+        "no_swing": 580,
+        "down_swing": 432,
+        "up_swing": 419
+      },
+      "swing_count": 851,
+      "mean_favorable_mfe_pct": 7.970173467461605
+    }
+  },
+  "classifier_target": "label (up_swing, down_swing, no_swing)",
+  "regressor_primary_target": "target_mfe_pct (favorable excursion %)",
+  "regressor_auxiliary_targets": [
+    "y_mfe",
+    "y_mae",
+    "y_ret",
+    "y_range"
+  ]
+}

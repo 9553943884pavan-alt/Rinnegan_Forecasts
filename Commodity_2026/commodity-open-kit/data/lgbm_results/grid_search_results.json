@@ -1,0 +1,74 @@
+[
+  {
+    "tau": 0.42,
+    "n_signals": 290,
+    "n_decided": 277,
+    "correctness": 49.458483754512635,
+    "depth": 83.21167883211679,
+    "catch_rate": 28.87700534759358,
+    "success_rate": 53.84905597807434
+  },
+  {
+    "tau": 0.45,
+    "n_signals": 258,
+    "n_decided": 246,
+    "correctness": 47.96747967479675,
+    "depth": 83.05084745762711,
+    "catch_rate": 27.27272727272727,
+    "success_rate": 52.76368480171704
+  },
+  {
+    "tau": 0.48,
+    "n_signals": 210,
+    "n_decided": 200,
+    "correctness": 47.0,
+    "depth": 84.04255319148936,
+    "catch_rate": 23.52941176470588,
+    "success_rate": 51.523988318731746
+  },
+  {
+    "tau": 0.5,
+    "n_signals": 172,
+    "n_decided": 166,
+    "correctness": 43.373493975903614,
+    "depth": 86.11111111111111,
+    "catch_rate": 19.25133689839572,
+    "success_rate": 49.57864732847015
+  },
+  {
+    "tau": 0.52,
+    "n_signals": 144,
+    "n_decided": 138,
+    "correctness": 41.30434782608695,
+    "depth": 84.21052631578947,
+    "catch_rate": 14.973262032085561,
+    "success_rate": 46.82937872465399
+  },
+  {
+    "tau": 0.55,
+    "n_signals": 106,
+    "n_decided": 102,
+    "correctness": 44.11764705882353,
+    "depth": 86.66666666666667,
+    "catch_rate": 11.229946524064172,
+    "success_rate": 47.33808674985145
+  },
+  {
+    "tau": 0.58,
+    "n_signals": 81,
+    "n_decided": 77,
+    "correctness": 42.857142857142854,
+    "depth": 84.84848484848484,
+    "catch_rate": 7.4866310160427805,
+    "success_rate": 45.064086240556826
+  },
+  {
+    "tau": 0.6,
+    "n_signals": 67,
+    "n_decided": 65,
+    "correctness": 43.07692307692308,
+    "depth": 89.28571428571429,
+    "catch_rate": 6.417112299465241,
+    "success_rate": 46.25991655403421
+  }
+]

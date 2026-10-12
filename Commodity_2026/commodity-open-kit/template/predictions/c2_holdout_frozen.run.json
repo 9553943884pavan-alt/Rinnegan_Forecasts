@@ -1,0 +1,95 @@
+{
+  "stem": "c2_holdout_frozen",
+  "rules_version": "2.6",
+  "arguments": {
+    "pack": "pack/v2.0.1",
+    "challenge": 2,
+    "period": "holdout",
+    "frozen": true,
+    "out": "./template/predictions",
+    "start": null,
+    "end": null,
+    "train_end": null,
+    "horizons": "5,10"
+  },
+  "submission_commit": null,
+  "model": {
+    "class": "SwingForecaster",
+    "seed": 20260919,
+    "training_data_cutoff": "the train_end passed to fit(); no pretrained weights"
+  },
+  "pack": {
+    "root": "pack/v2.0.1",
+    "version": "v2.0.1",
+    "built_utc": "2026-10-05T02:48:56.084607+00:00",
+    "manifest_sha256": "3f3ff527078fbaabf3d76bac70aee38eb1ee87f0a32c8dd84c65aa64c883e97a",
+    "files": 32
+  },
+  "run": {
+    "challenge": 2,
+    "period": {
+      "name": "holdout",
+      "start": "2026-06-01",
+      "end": "2026-12-31",
+      "train_end_utc": "2026-06-01T03:00:00+00:00"
+    },
+    "frozen": true,
+    "horizons": [
+      5,
+      10
+    ],
+    "sessions": 85,
+    "first_session": "2026-06-01",
+    "last_session": "2026-09-25",
+    "rows": 680,
+    "signals": 680,
+    "no_signals": 0,
+    "updates": 0,
+    "outcomes_delivered": 0,
+    "stopped_at": "2026-09-28",
+    "fit_seconds": 3.532,
+    "loop_seconds": 80.393
+  },
+  "rows": {
+    "rows": 680,
+    "signals": 680,
+    "no_signals": 0,
+    "by_horizon": {
+      "5": 340,
+      "10": 340
+    },
+    "by_asset": {
+      "copper": 170,
+      "crude": 170,
+      "gold": 170,
+      "silver": 170
+    },
+    "by_direction": {
+      "down": 372,
+      "up": 308
+    },
+    "no_signals_by_asset": {}
+  },
+  "fit": {
+    "model": "SwingForecaster",
+    "train_end_utc": "2026-06-01T03:00:00+00:00",
+    "prior_keys": 16,
+    "assets": [
+      "gold",
+      "silver",
+      "copper",
+      "crude"
+    ]
+  },
+  "read_log": {
+    "path": "c2_holdout_frozen.readlog.jsonl",
+    "entries": 346
+  },
+  "validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "seconds": 83.959,
+  "python": "3.13.12"
+}

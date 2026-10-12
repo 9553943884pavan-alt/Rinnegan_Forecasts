@@ -1,0 +1,53 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IDE and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Large raw dataset packs (>100MB exceeds GitHub file limit, e.g. hl_quotes.parquet)
+Commodity_2026/commodity-open-pack/
+Commodity_2026/update-from-v2.0/
+*.pdf
+
+# Intermediate test and temporary parquet scratch files
+Commodity_2026/commodity-open-kit/data/lgbm_results/_temp*
+Commodity_2026/commodity-open-kit/data/lgbm_results/temp*
+Commodity_2026/commodity-open-kit/data/test_*
+Commodity_2026/commodity-open-kit/data/cache/

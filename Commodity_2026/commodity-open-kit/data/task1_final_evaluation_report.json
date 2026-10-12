@@ -1,0 +1,251 @@
+{
+  "rules_version": "2.6",
+  "scores": {
+    "catch_rate": {
+      "value": 27.807486631016044,
+      "ci_lo": 24.26877874297394,
+      "ci_hi": 31.15868359136724,
+      "level": 0.9,
+      "n": 187,
+      "n_episodes": 34,
+      "n_boot": 500,
+      "seed": 42,
+      "resamples_used": 500
+    },
+    "correctness": {
+      "value": 56.8075117370892,
+      "ci_lo": 50.0,
+      "ci_hi": 63.59443954104149,
+      "level": 0.9,
+      "n": 213,
+      "n_episodes": 34,
+      "n_boot": 500,
+      "seed": 42,
+      "resamples_used": 500
+    },
+    "depth": {
+      "value": 63.63636363636363,
+      "ci_lo": 53.54056033693463,
+      "ci_hi": 73.4587610619469,
+      "level": 0.9,
+      "n": 121,
+      "n_episodes": 31,
+      "n_boot": 500,
+      "seed": 42,
+      "resamples_used": 500
+    },
+    "success_rate": {
+      "value": 49.417120668156294,
+      "ci_lo": 45.07436496025359,
+      "ci_hi": 53.260693451777705,
+      "level": 0.9,
+      "n": 121,
+      "n_episodes": 35,
+      "n_boot": 500,
+      "seed": 42,
+      "resamples_used": 500
+    }
+  },
+  "counts": {
+    "signals_in_window": 221,
+    "invalid": 0,
+    "unmatured": 0,
+    "scored": 221,
+    "no_price": 0,
+    "ambiguous_bar": 1,
+    "scored_on_incomplete_window": 0,
+    "tick_priced": 0,
+    "decided": 213,
+    "undecided": 8,
+    "undecided_share": 0.03619909502262444,
+    "recorded_not_scored_other_horizon": 0,
+    "correct": 121,
+    "deep": 77,
+    "swings_in_window": 187,
+    "swings_caught": 52,
+    "swings_straddling_window_start": 4,
+    "swings_straddling_window_end": 0,
+    "swings_outside_window": 1916,
+    "signal_rows": 221,
+    "valid_signal_rows": 221,
+    "invalid_signal_rows": 0,
+    "invalid_reasons": {},
+    "no_signal_rows": 103,
+    "valid_no_signal_rows": 103
+  },
+  "ten_large_swings": {
+    "rule": "the 10 realized swings of the window with the largest move from turn to extreme divided by the asset's threshold, ties to the earlier turn and then the asset name, each caught or not exactly as for the catch rate; on the holdout at least 7 must be caught, on the forward window the check does not apply",
+    "top": 10,
+    "required": 7,
+    "swings_ranked": 10,
+    "caught": 7,
+    "swings": [
+      {
+        "rank": 1,
+        "asset": "crude",
+        "direction": "down",
+        "turn_utc": "2026-06-10 03:30:00+00:00",
+        "extreme_utc": "2026-06-16 03:30:00+00:00",
+        "move_pct": -18.92632781267847,
+        "threshold_pct": 3.0,
+        "threshold_multiple": 6.308775937559489,
+        "caught": true,
+        "caught_by_signal_utc": "2026-06-11 03:00:00+00:00"
+      },
+      {
+        "rank": 2,
+        "asset": "gold",
+        "direction": "up",
+        "turn_utc": "2026-08-03 03:30:00+00:00",
+        "extreme_utc": "2026-08-12 13:30:00+00:00",
+        "move_pct": 9.28661616161616,
+        "threshold_pct": 1.5,
+        "threshold_multiple": 6.19107744107744,
+        "caught": true,
+        "caught_by_signal_utc": "2026-08-05 03:00:00+00:00"
+      },
+      {
+        "rank": 3,
+        "asset": "crude",
+        "direction": "up",
+        "turn_utc": "2026-09-04 13:30:00+00:00",
+        "extreme_utc": "2026-09-11 03:30:00+00:00",
+        "move_pct": 18.13298316819864,
+        "threshold_pct": 3.0,
+        "threshold_multiple": 6.04432772273288,
+        "caught": true,
+        "caught_by_signal_utc": "2026-09-08 03:00:00+00:00"
+      },
+      {
+        "rank": 4,
+        "asset": "crude",
+        "direction": "down",
+        "turn_utc": "2026-07-23 17:30:00+00:00",
+        "extreme_utc": "2026-07-28 16:30:00+00:00",
+        "move_pct": -17.58666372267609,
+        "threshold_pct": 3.0,
+        "threshold_multiple": 5.86222124089203,
+        "caught": false,
+        "caught_by_signal_utc": null
+      },
+      {
+        "rank": 5,
+        "asset": "silver",
+        "direction": "down",
+        "turn_utc": "2026-06-22 12:30:00+00:00",
+        "extreme_utc": "2026-06-24 17:30:00+00:00",
+        "move_pct": -11.008451271044335,
+        "threshold_pct": 2.0,
+        "threshold_multiple": 5.504225635522167,
+        "caught": true,
+        "caught_by_signal_utc": "2026-06-23 03:00:00+00:00"
+      },
+      {
+        "rank": 6,
+        "asset": "silver",
+        "direction": "down",
+        "turn_utc": "2026-06-04 03:30:00+00:00",
+        "extreme_utc": "2026-06-08 03:30:00+00:00",
+        "move_pct": -10.73039581777446,
+        "threshold_pct": 2.0,
+        "threshold_multiple": 5.36519790888723,
+        "caught": false,
+        "caught_by_signal_utc": null
+      },
+      {
+        "rank": 7,
+        "asset": "silver",
+        "direction": "up",
+        "turn_utc": "2026-08-03 13:30:00+00:00",
+        "extreme_utc": "2026-08-07 12:30:00+00:00",
+        "move_pct": 10.14781551127327,
+        "threshold_pct": 2.0,
+        "threshold_multiple": 5.073907755636635,
+        "caught": true,
+        "caught_by_signal_utc": "2026-08-04 03:00:00+00:00"
+      },
+      {
+        "rank": 8,
+        "asset": "gold",
+        "direction": "up",
+        "turn_utc": "2026-08-19 04:30:00+00:00",
+        "extreme_utc": "2026-08-24 13:30:00+00:00",
+        "move_pct": 7.409749292726491,
+        "threshold_pct": 1.5,
+        "threshold_multiple": 4.939832861817661,
+        "caught": true,
+        "caught_by_signal_utc": "2026-08-20 03:00:00+00:00"
+      },
+      {
+        "rank": 9,
+        "asset": "silver",
+        "direction": "down",
+        "turn_utc": "2026-06-17 03:30:00+00:00",
+        "extreme_utc": "2026-06-19 03:30:00+00:00",
+        "move_pct": -9.65777480370457,
+        "threshold_pct": 2.0,
+        "threshold_multiple": 4.828887401852285,
+        "caught": false,
+        "caught_by_signal_utc": null
+      },
+      {
+        "rank": 10,
+        "asset": "silver",
+        "direction": "up",
+        "turn_utc": "2026-06-10 03:30:00+00:00",
+        "extreme_utc": "2026-06-15 03:30:00+00:00",
+        "move_pct": 9.516567504340594,
+        "threshold_pct": 2.0,
+        "threshold_multiple": 4.758283752170297,
+        "caught": true,
+        "caught_by_signal_utc": "2026-06-12 03:00:00+00:00"
+      }
+    ]
+  },
+  "coverage": {
+    "floor": 0.9,
+    "rule": "a valid signal row or a valid no_signal row on at least 90 percent of the asset's sessions in the window",
+    "per_asset": {
+      "copper": {
+        "sessions": 85,
+        "sessions_with_a_decision": 81,
+        "share": 0.9529411764705882,
+        "met": true
+      },
+      "crude": {
+        "sessions": 85,
+        "sessions_with_a_decision": 81,
+        "share": 0.9529411764705882,
+        "met": true
+      },
+      "gold": {
+        "sessions": 85,
+        "sessions_with_a_decision": 81,
+        "share": 0.9529411764705882,
+        "met": true
+      },
+      "silver": {
+        "sessions": 85,
+        "sessions_with_a_decision": 81,
+        "share": 0.9529411764705882,
+        "met": true
+      }
+    },
+    "pooled": {
+      "sessions": 340,
+      "sessions_with_a_decision": 324,
+      "share": 0.9529411764705882,
+      "met": true
+    },
+    "decision_records": 324,
+    "decision_records_outside_a_session": 0,
+    "met": true
+  },
+  "gates": {
+    "correctness": false,
+    "depth": true,
+    "top_10": true,
+    "coverage": true,
+    "success_rate": false
+  }
+}

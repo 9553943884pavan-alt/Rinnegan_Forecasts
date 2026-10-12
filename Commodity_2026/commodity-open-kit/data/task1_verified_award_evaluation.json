@@ -1,0 +1,82 @@
+{
+  "task": "Task 1: Pre-open Directional Swing Prediction",
+  "rules_version": "2.6",
+  "period": "holdout",
+  "model_architecture": "Boss (LightGBM Multiclass Classifier with Balanced Weights) + Employee (LightGBM Huber Regressor)",
+  "features": "60 Leak-Free Input Features (Microstructure, COT Smart Money, Hyperliquid Crypto/Commodity, FBIL FX, Calendar, FinBERT Sentiment)",
+  "gates": {
+    "correctness": {
+      "score": 60.9,
+      "threshold": 60.0,
+      "status": "PASS"
+    },
+    "depth": {
+      "score": 67.37,
+      "threshold": 60.0,
+      "status": "PASS"
+    },
+    "top_10_large_swings": {
+      "caught": 7,
+      "required": 7,
+      "total": 10,
+      "status": "PASS"
+    },
+    "coverage_floor": {
+      "share": 95.29,
+      "threshold": 90.0,
+      "status": "PASS"
+    },
+    "success_rate": {
+      "score": 50.6,
+      "threshold": 70.0,
+      "status": "FAIL"
+    }
+  },
+  "counts": {
+    "signals_issued": 162,
+    "signals_decided": 156,
+    "signals_undecided": 6,
+    "signals_correct": 95,
+    "swings_total": 187,
+    "swings_caught": 44,
+    "catch_rate": 23.53
+  },
+  "per_asset_performance": {
+    "gold": {
+      "signals": 37,
+      "decided": 36,
+      "correct": 22,
+      "correctness_pct": 61.11,
+      "swings": 40,
+      "swings_caught": 11,
+      "catch_rate_pct": 27.5
+    },
+    "silver": {
+      "signals": 24,
+      "decided": 24,
+      "correct": 14,
+      "correctness_pct": 58.33,
+      "swings": 56,
+      "swings_caught": 10,
+      "catch_rate_pct": 17.86
+    },
+    "copper": {
+      "signals": 61,
+      "decided": 56,
+      "correct": 34,
+      "correctness_pct": 60.71,
+      "swings": 31,
+      "swings_caught": 10,
+      "catch_rate_pct": 32.26
+    },
+    "crude": {
+      "signals": 40,
+      "decided": 40,
+      "correct": 25,
+      "correctness_pct": 62.5,
+      "swings": 60,
+      "swings_caught": 13,
+      "catch_rate_pct": 21.67
+    }
+  }
+}

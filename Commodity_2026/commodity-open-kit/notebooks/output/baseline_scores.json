@@ -1,0 +1,506 @@
+{
+  "rules_version": "2.6",
+  "pack": "pack/v2.0.1",
+  "window": {
+    "period": "holdout",
+    "start_utc": "2026-06-01T00:00:00+00:00",
+    "end_utc": "2026-09-25T18:00:00+00:00",
+    "horizons_scored": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "episode_horizon": 10
+  },
+  "swings": "pack/v2.0.1/swings/swings.parquet",
+  "challenge_1": {
+    "scored_file": "output/baseline_1_range_break_holdout.parquet",
+    "scores": {
+      "catch_rate": {
+        "value": 25.13368983957219,
+        "ci_lo": 21.26436781609195,
+        "ci_hi": 29.327642791340395,
+        "level": 0.9,
+        "n": 187,
+        "n_episodes": 34,
+        "n_boot": 2000,
+        "seed": 0,
+        "resamples_used": 2000
+      },
+      "correctness": {
+        "value": 51.09289617486339,
+        "ci_lo": 46.11376565976318,
+        "ci_hi": 56.220795743696506,
+        "level": 0.9,
+        "n": 366,
+        "n_episodes": 35,
+        "n_boot": 2000,
+        "seed": 0,
+        "resamples_used": 2000
+      },
+      "depth": {
+        "value": 64.1711229946524,
+        "ci_lo": 56.17977528089888,
+        "ci_hi": 71.29873294346977,
+        "level": 0.9,
+        "n": 187,
+        "n_episodes": 33,
+        "n_boot": 2000,
+        "seed": 0,
+        "resamples_used": 2000
+      },
+      "success_rate": {
+        "value": 46.79923633636266,
+        "ci_lo": 42.656001431040934,
+        "ci_hi": 50.848492707209495,
+        "level": 0.9,
+        "n": 187,
+        "n_episodes": 35,
+        "n_boot": 2000,
+        "seed": 0,
+        "resamples_used": 2000
+      }
+    },
+    "counts": {
+      "signals_in_window": 390,
+      "invalid": 0,
+      "unmatured": 13,
+      "scored": 377,
+      "no_price": 0,
+      "ambiguous_bar": 2,
+      "scored_on_incomplete_window": 17,
+      "tick_priced": 268,
+      "decided": 366,
+      "undecided": 11,
+      "undecided_share": 0.029177718832891247,
+      "recorded_not_scored_other_horizon": 0,
+      "correct": 187,
+      "deep": 120,
+      "swings_in_window": 187,
+      "swings_caught": 47,
+      "swings_straddling_window_start": 4,
+      "swings_straddling_window_end": 0,
+      "swings_outside_window": 1916,
+      "signal_rows": 390,
+      "valid_signal_rows": 390,
+      "invalid_signal_rows": 0,
+      "invalid_reasons": {},
+      "no_signal_rows": 145,
+      "valid_no_signal_rows": 145
+    },
+    "coverage": {
+      "floor": 0.9,
+      "rule": "a valid signal row or a valid no_signal row on at least 90 percent of the asset's sessions in the window",
+      "per_asset": {
+        "copper": {
+          "sessions": 85,
+          "sessions_with_a_decision": 85,
+          "share": 1.0,
+          "met": true
+        },
+        "crude": {
+          "sessions": 85,
+          "sessions_with_a_decision": 85,
+          "share": 1.0,
+          "met": true
+        },
+        "gold": {
+          "sessions": 85,
+          "sessions_with_a_decision": 85,
+          "share": 1.0,
+          "met": true
+        },
+        "silver": {
+          "sessions": 85,
+          "sessions_with_a_decision": 85,
+          "share": 1.0,
+          "met": true
+        }
+      },
+      "pooled": {
+        "sessions": 340,
+        "sessions_with_a_decision": 340,
+        "share": 1.0,
+        "met": true
+      },
+      "decision_records": 535,
+      "decision_records_outside_a_session": 0,
+      "met": true
+    },
+    "baselines": {
+      "range_break": {
+        "catch_rate": {
+          "value": 25.13368983957219,
+          "ci_lo": 21.26436781609195,
+          "ci_hi": 29.327642791340395,
+          "level": 0.9,
+          "n": 187,
+          "n_episodes": 34,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "correctness": {
+          "value": 51.09289617486339,
+          "ci_lo": 46.11376565976318,
+          "ci_hi": 56.220795743696506,
+          "level": 0.9,
+          "n": 366,
+          "n_episodes": 35,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "depth": {
+          "value": 64.1711229946524,
+          "ci_lo": 56.17977528089888,
+          "ci_hi": 71.29873294346977,
+          "level": 0.9,
+          "n": 187,
+          "n_episodes": 33,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "success_rate": {
+          "value": 46.79923633636266,
+          "ci_lo": 42.656001431040934,
+          "ci_hi": 50.848492707209495,
+          "level": 0.9,
+          "n": 187,
+          "n_episodes": 35,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        }
+      },
+      "stretch_reversal": {
+        "catch_rate": {
+          "value": 8.02139037433155,
+          "ci_lo": 5.113056586270872,
+          "ci_hi": 11.11111111111111,
+          "level": 0.9,
+          "n": 187,
+          "n_episodes": 34,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "correctness": {
+          "value": 46.666666666666664,
+          "ci_lo": 35.714285714285715,
+          "ci_hi": 61.36363636363637,
+          "level": 0.9,
+          "n": 120,
+          "n_episodes": 23,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "depth": {
+          "value": 50.0,
+          "ci_lo": 36.20210727969348,
+          "ci_hi": 63.63636363636363,
+          "level": 0.9,
+          "n": 56,
+          "n_episodes": 18,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "success_rate": {
+          "value": 34.89601901366607,
+          "ci_lo": 28.22082060755791,
+          "ci_hi": 42.00086024062794,
+          "level": 0.9,
+          "n": 56,
+          "n_episodes": 34,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        }
+      }
+    }
+  },
+  "challenge_2": {
+    "scored_file": "output/baseline_2_rv_band_holdout.parquet",
+    "scores": {
+      "direction": {
+        "value": 49.32330827067669,
+        "ci_lo": 43.429356985948566,
+        "ci_hi": 55.38256560202528,
+        "level": 0.9,
+        "n": 665,
+        "n_episodes": 36,
+        "n_boot": 2000,
+        "seed": 0,
+        "resamples_used": 2000
+      },
+      "depth": {
+        "value": 76.82926829268293,
+        "ci_lo": 68.24905151963499,
+        "ci_hi": 84.64586755318625,
+        "level": 0.9,
+        "n": 328,
+        "n_episodes": 35,
+        "n_boot": 2000,
+        "seed": 0,
+        "resamples_used": 2000
+      },
+      "improvement": {
+        "value": 0.0,
+        "ci_lo": 0.0,
+        "ci_hi": 0.0,
+        "level": 0.9,
+        "n": 665,
+        "n_episodes": 36,
+        "n_boot": 2000,
+        "seed": 0,
+        "resamples_used": 2000
+      },
+      "success_rate": {
+        "value": 42.0508588544532,
+        "ci_lo": 39.05499707460629,
+        "ci_hi": 44.98989239080702,
+        "level": 0.9,
+        "n": 328,
+        "n_episodes": 36,
+        "n_boot": 2000,
+        "seed": 0,
+        "resamples_used": 2000
+      }
+    },
+    "counts": {
+      "signals_in_window": 680,
+      "invalid": 2,
+      "unmatured": 15,
+      "scored": 665,
+      "no_price": 0,
+      "ambiguous_bar": 2,
+      "scored_on_incomplete_window": 37,
+      "tick_priced": 458,
+      "recorded_not_scored_other_horizon": 0,
+      "directionally_realized": 328,
+      "in_band": 252,
+      "invalidation_pct_median": 1.75,
+      "invalidation_pct_max": 3.0,
+      "signal_rows": 680,
+      "valid_signal_rows": 678,
+      "invalid_signal_rows": 2,
+      "invalid_reasons": {
+        "band_too_wide": 2
+      },
+      "no_signal_rows": 0,
+      "valid_no_signal_rows": 0
+    },
+    "coverage": {
+      "floor": 0.9,
+      "rule": "a valid signal row or a valid no_signal row on at least 90 percent of the asset's sessions in the window",
+      "per_asset": {
+        "copper": {
+          "sessions": 85,
+          "sessions_with_a_decision": 85,
+          "share": 1.0,
+          "met": true
+        },
+        "crude": {
+          "sessions": 85,
+          "sessions_with_a_decision": 85,
+          "share": 1.0,
+          "met": true
+        },
+        "gold": {
+          "sessions": 85,
+          "sessions_with_a_decision": 85,
+          "share": 1.0,
+          "met": true
+        },
+        "silver": {
+          "sessions": 85,
+          "sessions_with_a_decision": 85,
+          "share": 1.0,
+          "met": true
+        }
+      },
+      "pooled": {
+        "sessions": 340,
+        "sessions_with_a_decision": 340,
+        "share": 1.0,
+        "met": true
+      },
+      "decision_records": 678,
+      "decision_records_outside_a_session": 0,
+      "met": true
+    },
+    "hard_conditions": {
+      "learning_beats_frozen": false,
+      "second_half_at_least_first_half": true,
+      "direction_at_least_minimum": false,
+      "frozen_beats_prevailing_null": true,
+      "learning_beats_prevailing_null": true
+    },
+    "prevailing_direction_null": {
+      "rule": "the sign of the last five completed sessions' move, issued at the entry's instants with the entry's horizon, expected and invalidation at the asset threshold",
+      "direction_at_entry_instants": 45.70135746606335,
+      "direction_at_frozen_instants": 45.70135746606335,
+      "n": 663
+    },
+    "baselines": {
+      "prevailing_direction": {
+        "direction": {
+          "value": 45.714285714285715,
+          "ci_lo": 40.48940587343216,
+          "ci_hi": 51.237992338248944,
+          "level": 0.9,
+          "n": 665,
+          "n_episodes": 36,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "depth": {
+          "value": 85.19736842105263,
+          "ci_lo": 78.61978617678061,
+          "ci_hi": 91.11842105263158,
+          "level": 0.9,
+          "n": 304,
+          "n_episodes": 33,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "improvement": {
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "level": 0.9,
+          "n": 665,
+          "n_episodes": 36,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "success_rate": {
+          "value": 43.63721804511278,
+          "ci_lo": 40.88633653630247,
+          "ci_hi": 46.28952991581559,
+          "level": 0.9,
+          "n": 304,
+          "n_episodes": 36,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        }
+      },
+      "rv_band": {
+        "direction": {
+          "value": 49.32330827067669,
+          "ci_lo": 43.429356985948566,
+          "ci_hi": 55.38256560202528,
+          "level": 0.9,
+          "n": 665,
+          "n_episodes": 36,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "depth": {
+          "value": 76.82926829268293,
+          "ci_lo": 68.24905151963499,
+          "ci_hi": 84.64586755318625,
+          "level": 0.9,
+          "n": 328,
+          "n_episodes": 35,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "improvement": {
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "level": 0.9,
+          "n": 665,
+          "n_episodes": 36,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "success_rate": {
+          "value": 42.0508588544532,
+          "ci_lo": 39.05499707460629,
+          "ci_hi": 44.98989239080702,
+          "level": 0.9,
+          "n": 328,
+          "n_episodes": 36,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        }
+      },
+      "range_break_vol": {
+        "direction": {
+          "value": 49.3368700265252,
+          "ci_lo": 43.93880667136481,
+          "ci_hi": 54.54651905471577,
+          "level": 0.9,
+          "n": 377,
+          "n_episodes": 36,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "depth": {
+          "value": 76.34408602150538,
+          "ci_lo": 67.50983690265221,
+          "ci_hi": 83.95198144737738,
+          "level": 0.9,
+          "n": 186,
+          "n_episodes": 33,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "improvement": {
+          "value": 0.0,
+          "ci_lo": 0.0,
+          "ci_hi": 0.0,
+          "level": 0.9,
+          "n": 377,
+          "n_episodes": 36,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "success_rate": {
+          "value": 41.893652016010186,
+          "ci_lo": 38.25684793031906,
+          "ci_hi": 44.992382202397295,
+          "level": 0.9,
+          "n": 186,
+          "n_episodes": 36,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        }
+      }
+    }
+  }
+}

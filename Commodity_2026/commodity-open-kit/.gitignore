@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+/pack/
+/notebooks/pack/
+/template/pack/
+predictions_*.parquet
+predictions_*.jsonl
+predictions_*.csv

@@ -1,0 +1,681 @@
+{
+  "built_utc": "2026-10-05T02:48:56.084607+00:00",
+  "corrections": [
+    {
+      "reason": "rebuilt from the quotes to 25 Sep, where v2.0 used the quotes to 15 Sep: 36 rows of the sessions 15 to 25 Sep differ, and from 16 Sep they use hourly bars where v2.0 used daily bars",
+      "table": "swings/swing_sessions.parquet"
+    },
+    {
+      "reason": "rebuilt from the quotes to 25 Sep, where v2.0 used the quotes to 15 Sep: 13 legs of v2.0 are replaced by 15, all with turn and extreme between 14 and 24 Sep",
+      "table": "swings/swings.parquet"
+    }
+  ],
+  "files": [
+    {
+      "bytes": 122137,
+      "clock_quality": {
+        "clocks": {
+          "published": "release_utc"
+        },
+        "file": "mixed",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 3061,
+          "unvintaged": 552
+        },
+        "rule": "published rows carry the authority's stated release instant in release_utc (converted from local_tz); unvintaged rows (holidays, OPEC meetings, one EIA slip, and the central-bank and Indian releases whose authority states no clock) carry only a civil date in release_date with release_utc null and are excluded from point-in-time reads; rows built from a standing rule for future weeks say so in notes"
+      },
+      "lane": "calendar",
+      "meta_path": "calendar/release_schedule.meta.json",
+      "path": "calendar/release_schedule.parquet",
+      "rows": 3613,
+      "sha256": "adb82976f6b174e52c94abf2ef5ad32fc45c4d245c81e71e138d2bc4c08627dd"
+    },
+    {
+      "bytes": 58317,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": null,
+        "rows": {
+          "published": 1849
+        },
+        "rule": "row availability is the actual's availability; consensus_quality names the consensus provenance (exact only for consensus captured by our timer before the release, unvintaged otherwise)"
+      },
+      "lane": "calendar",
+      "meta_path": "calendar/release_surprises.meta.json",
+      "path": "calendar/release_surprises.parquet",
+      "rows": 1849,
+      "sha256": "53346e8307aada1470473f1179ddb780492fc902b2baf357e158a49742007bbc"
+    },
+    {
+      "bytes": 153974,
+      "clock_quality": {
+        "clocks": {
+          "exact": "captured_utc",
+          "published": "available_utc"
+        },
+        "file": "mixed",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 641,
+          "published": 9613,
+          "unvintaged": 1893
+        },
+        "rule": "exact: our own live capture, available_utc equals captured_utc; published: an agency vintage (ALFRED, FOMC statement) or provider actual/previous/revision whose availability is the scheduled release instant in available_utc, null when only the day (available_date) is known; unvintaged: a consensus read from a calendar after the event, available_utc set to the capture time, never before the release"
+      },
+      "lane": "calendar",
+      "meta_path": "calendar/release_vintages.meta.json",
+      "path": "calendar/release_vintages.parquet",
+      "rows": 12147,
+      "sha256": "7150526048f391648c65dce2e4bb74626b5629faf2430bd2d2b95bb10f900cb6"
+    },
+    {
+      "bytes": 6234853,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 202615
+        },
+        "rule": "Every input row is a Bhav Copy row whose availability is the session close instant from mcx_sessions (class published: the exchange publishes after the close and we did not capture live). Each output row carries the close instant of the latest session it depends on."
+      },
+      "lane": "labels",
+      "meta_path": "labels/chain_daily.meta.json",
+      "path": "labels/chain_daily.parquet",
+      "rows": 202615,
+      "sha256": "3ba383d5c8255b7564338dc3d5041f2bd03cf8ed147e107eb321df59e11e4458"
+    },
+    {
+      "bytes": 234950,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 17496
+        },
+        "rule": "Every input row is a Bhav Copy row whose availability is the session close instant from mcx_sessions (class published: the exchange publishes after the close and we did not capture live). Each output row carries the close instant of the latest session it depends on."
+      },
+      "lane": "labels",
+      "meta_path": "labels/designations.meta.json",
+      "path": "labels/designations.parquet",
+      "rows": 17496,
+      "sha256": "9ad7709ad8484c4965da9e480dc701bffce5e178b52d532d6bc89122611d31ed"
+    },
+    {
+      "bytes": 486211,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 17323
+        },
+        "rule": "Every input row is a Bhav Copy row whose availability is the session close instant from mcx_sessions (class published: the exchange publishes after the close and we did not capture live). Each output row carries the close instant of the latest session it depends on."
+      },
+      "lane": "labels",
+      "meta_path": "labels/return_targets.meta.json",
+      "path": "labels/return_targets.parquet",
+      "rows": 17323,
+      "sha256": "77afca31f36c6777adf7ea4b91f4c074509339b113be2512a5761aba505c3c59"
+    },
+    {
+      "bytes": 530952,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 51969
+        },
+        "rule": "Every input row is a Bhav Copy row whose availability is the session close instant from mcx_sessions (class published: the exchange publishes after the close and we did not capture live). Each output row carries the close instant of the latest session it depends on."
+      },
+      "lane": "labels",
+      "meta_path": "labels/swing_labels.meta.json",
+      "path": "labels/swing_labels.parquet",
+      "rows": 51969,
+      "sha256": "84f5a1b2fe12a8a904d9d61d74f4f9fd59947074ac1667ec7cad6b53d8452f54"
+    },
+    {
+      "bytes": 1071703,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "mixed",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 122279,
+          "unvintaged": 39
+        },
+        "rule": "Per-row clock_quality. published rows: available_utc is realtime_start + 1 day 00:00 UTC (available_rule next_day_00utc), or the series' first ALFRED vintage + 1 day for pre-tracking history (first_vintage_next_day_00utc; a lower bound, not a publication instant). unvintaged rows (available_rule vintage_precedes_observation): FRED's vintage date precedes the observation period, no credible availability instant, available_utc null."
+      },
+      "lane": "macro",
+      "meta_path": "macro/alfred_vintages.meta.json",
+      "path": "macro/alfred_vintages.parquet",
+      "rows": 122318,
+      "sha256": "fa3738aa906d1ebded594c2c48ea19b97c1dfeccf45941d08b0327eadbddd192"
+    },
+    {
+      "bytes": 1216854,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 3492
+        },
+        "rule": "Every row is published. available_utc = loaded_utc (Socrata :created_at, the row's API load instant, 15:30 ET on the actual publication day) when the row was loaded one report at a time, else release_utc (15:30 ET on the scheduled release day from the captured CFTC schedule pages or press release 7864-19); available_source says which. release_caveat marks report weeks whose scheduled day is documented as wrong or uncertain (2013 and 2018-19 lapses in appropriations, Juneteenth 2021, 2023 ION incident, 2025-01-09 day of mourning, 2025 lapse)."
+      },
+      "lane": "macro",
+      "meta_path": "macro/cot.meta.json",
+      "path": "macro/cot.parquet",
+      "rows": 3492,
+      "sha256": "b87211fc60a0508ed7863dd69a50dc112c9241dae9ca116dd09f8e96ddb1ceba"
+    },
+    {
+      "bytes": 857125,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 3492
+        },
+        "rule": "Every row is published. available_utc = loaded_utc (Socrata :created_at, the row's API load instant, 15:30 ET on the actual publication day) when the row was loaded one report at a time, else release_utc (15:30 ET on the scheduled release day from the captured CFTC schedule pages or press release 7864-19); available_source says which. release_caveat marks report weeks whose scheduled day is documented as wrong or uncertain (2013 and 2018-19 lapses in appropriations, Juneteenth 2021, 2023 ION incident, 2025-01-09 day of mourning, 2025 lapse)."
+      },
+      "lane": "macro",
+      "meta_path": "macro/cot_legacy.meta.json",
+      "path": "macro/cot_legacy.parquet",
+      "rows": 3492,
+      "sha256": "a85f14020e114e7babab24cc38239cb37fd79ef269f285ff578e01e64b177067"
+    },
+    {
+      "bytes": 48644,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 1066
+        },
+        "rule": "Every row is published: available_utc = close_utc, the candle's close; capture happened later."
+      },
+      "lane": "macro",
+      "meta_path": "macro/hl_candles_1d.meta.json",
+      "path": "macro/hl_candles_1d.parquet",
+      "rows": 1066,
+      "sha256": "03b0baf47e511718f26bb9fa07eb7008d2603846c2ace71426b9de4af9b0ff80"
+    },
+    {
+      "bytes": 788450,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 21005
+        },
+        "rule": "Every row is published: available_utc = close_utc, the candle's close; capture happened later."
+      },
+      "lane": "macro",
+      "meta_path": "macro/hl_candles_1h.meta.json",
+      "path": "macro/hl_candles_1h.parquet",
+      "rows": 21005,
+      "sha256": "f27c64a2173225ade6664b88db33539c7d8f6d2aafafe353be97323f3bcf3109"
+    },
+    {
+      "bytes": 568835,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 25624
+        },
+        "rule": "Every row is published: available_utc = time_utc, the funding timestamp; capture happened later."
+      },
+      "lane": "macro",
+      "meta_path": "macro/hl_funding.meta.json",
+      "path": "macro/hl_funding.parquet",
+      "rows": 25624,
+      "sha256": "c32fea97f796001f3d4166ac8cb42cdb574d93dc1101822db041872fd94ecf8b"
+    },
+    {
+      "bytes": 49120,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 1381
+        },
+        "rule": "Every row is published: available_utc is FBIL's stated displayTime (published_ist, Asia/Kolkata) in UTC; we did not capture at that time. usdinr_dexinus is the latest FRED vintage joined on the civil date for cross-checking only and carries no clock."
+      },
+      "lane": "macro",
+      "meta_path": "macro/usdinr.meta.json",
+      "path": "macro/usdinr.parquet",
+      "rows": 1381,
+      "sha256": "bd54ca46074401475b1147ada810c8fceab5434e02c13cf3a167184bedba28f3"
+    },
+    {
+      "bytes": 4038946,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 156409
+        },
+        "rule": "The exchange publishes the Bhav Copy after the session closes and we did not capture it live, so every row is published with unknown latency. available_utc is the session's close instant from mcx_sessions (evening close 23:30 or 23:55 IST per the hours circular in force, the 17:00 morning close on morning-only days, the Muhurat or budget-session close where one applies); for a session whose evening close no retained circular states, the later published close (23:55 IST) is used so the instant is never earlier than the true close."
+      },
+      "lane": "mcx",
+      "meta_path": "mcx/mcx_daily.meta.json",
+      "path": "mcx/mcx_daily.parquet",
+      "rows": 156409,
+      "sha256": "3641ea0c006cba33b0ca3765577fc9ed0bc26ce95c58784eee78b72737ba003c"
+    },
+    {
+      "bytes": 16945,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "mixed",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 2148,
+          "unvintaged": 43
+        },
+        "rule": "Each row's state and hours are stated by the circulars in evidence_ids; available_utc is 00:00 UTC of the day after the latest of their issue dates (the annual trading-holiday circular alone for ordinary and holiday dates it governs, plus the Revision in Trading Hours circular that states the evening close, plus any single-date circular such as an election closure, a Muhurat timing or a budget-day live session). Rows classed unvintaged assert the 23:30 fallback evening close past the last retained hours circular: their state is published at available_utc but their close time has no circular behind it."
+      },
+      "lane": "mcx",
+      "meta_path": "mcx/mcx_sessions.meta.json",
+      "path": "mcx/mcx_sessions.parquet",
+      "rows": 2191,
+      "sha256": "85c2410868aa72d8aa5c9867f0b0b555078c284ec4733c4cb48bc6085ea1c797"
+    },
+    {
+      "bytes": 13986979,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "exact",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 89858
+        },
+        "rule": "created_at is the feed's own computation time: exact."
+      },
+      "lane": "pack",
+      "meta_path": "pack/news/news_clusters.meta.json",
+      "path": "pack/news/news_clusters.parquet",
+      "rows": 89858,
+      "sha256": "1342352d62a124f7c688346248c6dfa55e8b5b4939b0f5a57c9586fad71b76f9"
+    },
+    {
+      "bytes": 8164363,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "exact",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 177671
+        },
+        "rule": "clock inherited from the cluster version's created_at (exact)."
+      },
+      "lane": "pack",
+      "meta_path": "pack/news/news_memberships.meta.json",
+      "path": "pack/news/news_memberships.parquet",
+      "rows": 177671,
+      "sha256": "3aa1f8f5339250c54cbb8766e3583dc7aeb498cc5e5999edfd025404e9815ff5"
+    },
+    {
+      "bytes": 75405604,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "mixed",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 112543,
+          "published": 19041
+        },
+        "rule": "exact when fetched_at is within 24 h after published_at (the feed polled the source while the item was fresh); otherwise published, with available_utc = fetched_at, the first instant the feed had the item. published_utc is the publisher's label and never an availability clock."
+      },
+      "lane": "pack",
+      "meta_path": "pack/news/news_rows.meta.json",
+      "path": "pack/news/news_rows.parquet",
+      "rows": 131584,
+      "sha256": "ad721cb5fc0e349d70430ec8855b2fa204d9bee9f484720c57e09c82954791cf"
+    },
+    {
+      "bytes": 13563444,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "mixed",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 1309232,
+          "published": 2046
+        },
+        "rule": "TE rows (adapter te:*, status live): ts = datetime.now(UTC) when the shared TE cache was read (<= 10 s after the fetch), so exact and conservative. yfinance fallback rows: ts is the 1m bar time: published, available_utc = bar time."
+      },
+      "lane": "pack",
+      "meta_path": "pack/quotes/brent_quotes.meta.json",
+      "path": "pack/quotes/brent_quotes.parquet",
+      "rows": 1311278,
+      "sha256": "9d45f9c88e6465ea011939da2f77dfe3463cd4359b6872e552d520d600728a56"
+    },
+    {
+      "bytes": 1281935,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "mixed",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 38076,
+          "published": 22881
+        },
+        "rule": "Rows with contractEvidence.observedActiveContract.observedAt (from 2026-07-23): exact, fetched_utc = observedAt. Earlier rows: published, available_utc = regularMarketTime (Yahoo's delayed feed shows a trade roughly 10-15 minutes after it prints, so true availability is later than this bound)."
+      },
+      "lane": "pack",
+      "meta_path": "pack/quotes/comex_delayed_quotes.meta.json",
+      "path": "pack/quotes/comex_delayed_quotes.parquet",
+      "rows": 60957,
+      "sha256": "8bf18c5e5cdf8fe8e6ced64d74be30adb384490b93473d318dc384cc39888f97"
+    },
+    {
+      "bytes": 167289729,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "exact",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 5139823
+        },
+        "rule": "ts is datetime.now(UTC) at the poll by the upstream collector: exact; available_utc = fetched_utc."
+      },
+      "lane": "pack",
+      "meta_path": "pack/quotes/hl_quotes.meta.json",
+      "path": "pack/quotes/hl_quotes.parquet",
+      "rows": 5139823,
+      "sha256": "f547651807d1a46589e81be473ada90ae32e2a33142d4bca77a66769a47d26c3"
+    },
+    {
+      "bytes": 44353023,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "mixed",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 363763,
+          "published": 805230
+        },
+        "rule": "Rows without a transport key (2026-06-22..2026-07-14 polling era) have ts stamped by the feed at the poll: exact, available_utc = fetched_utc. Rows with transport angel_ws/angel_rest have ts = the exchange timestamp (Reading.ts), not a capture clock: published, available_utc = max(ts, exchFeedTime, exchTradeTime). Capture followed within the collector's freshness window for live rows (WS delivery; REST fetch - exchFeedTime <= 60 s) and with unbounded lag for delayed rows."
+      },
+      "lane": "pack",
+      "meta_path": "pack/quotes/mcx_quotes.meta.json",
+      "path": "pack/quotes/mcx_quotes.parquet",
+      "rows": 1168993,
+      "sha256": "7d0f1c29535bfa2e346a262b1ef280b14b90b5a95a951c3db4baecef34c15e81"
+    },
+    {
+      "bytes": 46570630,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "exact",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 1247640
+        },
+        "rule": "fetched_utc = raw linuxReceivedTs (feed receive clock), else raw fetchTs (bridge capture clock): exact. available_utc = fetched_utc (the bridge's own availabilityTs is a few hundred ms earlier and is not used as the pack clock). Rows with neither clock would be published on eventTs; none observed."
+      },
+      "lane": "pack",
+      "meta_path": "pack/quotes/moneyplant_quotes.meta.json",
+      "path": "pack/quotes/moneyplant_quotes.parquet",
+      "rows": 1247640,
+      "sha256": "ef99f374aad17e559661a0036d3cc9b85106c48db76c7716d75a6f5cacce550d"
+    },
+    {
+      "bytes": 50579494,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "mixed",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 5213731,
+          "published": 140789,
+          "unvintaged": 70
+        },
+        "rule": "shfe/ine: ts = datetime.now(UTC) at the Sina poll: exact. lbma: ts = the auction time (gold 15:00, silver 12:00 London): published. goldapi: ts = provider updatedAt: published. investing: ts = the bar time of a delayed chart API: published. lme_westmetall: the source gives a date only (timestamp_precision = date): unvintaged; raw_file_date bounds availability from above."
+      },
+      "lane": "pack",
+      "meta_path": "pack/quotes/reference_quotes.meta.json",
+      "path": "pack/quotes/reference_quotes.parquet",
+      "rows": 5354590,
+      "sha256": "b3726b9d14d428fbf375581e5e6a3ddd84b35cb28b93b47eff228e81ba0a411e"
+    },
+    {
+      "bytes": 36367942,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "exact",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 4171599
+        },
+        "rule": "ts is datetime.now(UTC) at the poll by the upstream collector: exact; available_utc = fetched_utc."
+      },
+      "lane": "pack",
+      "meta_path": "pack/quotes/te_quotes.meta.json",
+      "path": "pack/quotes/te_quotes.parquet",
+      "rows": 4171599,
+      "sha256": "b0cceb5a965655f30e5e8248d8a87a2c362527747740643f77d39deb8a350155"
+    },
+    {
+      "bytes": 13193,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "exact",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 36
+        },
+        "rule": "fetched_ts is the feed's own capture clock: exact. The CFTC release instant the feed recorded is kept as release_utc."
+      },
+      "lane": "pack",
+      "meta_path": "pack/receipts/cot_record_receipts.meta.json",
+      "path": "pack/receipts/cot_record_receipts.parquet",
+      "rows": 36,
+      "sha256": "6877d786049cf07621a8104ddfe1d5bc530de1d4218f1155a5e2d5b87b65950e"
+    },
+    {
+      "bytes": 69089767,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "exact",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 1300950
+        },
+        "rule": "fetched_ts is the feed's own capture clock: exact."
+      },
+      "lane": "pack",
+      "meta_path": "pack/receipts/fx_rate_receipts.meta.json",
+      "path": "pack/receipts/fx_rate_receipts.parquet",
+      "rows": 1300950,
+      "sha256": "53c6119e406d2e01bf55421f4716836e53d0275d8d2cd73b81790d740d2f52ce"
+    },
+    {
+      "bytes": 161831,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "exact",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 3066
+        },
+        "rule": "fetched_ts is the feed's own capture clock: exact. effective_utc is the venue close, not a clock."
+      },
+      "lane": "pack",
+      "meta_path": "pack/receipts/reference_closes.meta.json",
+      "path": "pack/receipts/reference_closes.parquet",
+      "rows": 3066,
+      "sha256": "57fc4d144055d5ba5927f60322680c660de4ecf4c52f725c3f4fc27a3d1142fa"
+    },
+    {
+      "bytes": 328465,
+      "clock_quality": {
+        "clocks": {
+          "exact": "fetched_utc",
+          "published": "available_utc"
+        },
+        "file": "exact",
+        "row_column": "clock_quality",
+        "rows": {
+          "exact": 4608
+        },
+        "rule": "asof_utc is the availability clock by construction: every input row has its own availability clock strictly before asof_utc."
+      },
+      "lane": "pack",
+      "meta_path": "pack/state/mcx_hourly_state.meta.json",
+      "path": "pack/state/mcx_hourly_state.parquet",
+      "rows": 4608,
+      "sha256": "943287f4a7dd08e70e3a37a7221749fdfe6991a5010f9d73bf4fc38002bb6b93"
+    },
+    {
+      "bytes": 84323,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 5832
+        },
+        "rule": "A swing row's availability is the settlement publication of the session its extreme printed in: that session's close instant from mcx_sessions, the same convention mcx_daily uses. The exchange publishes at or after the close and we did not capture at that instant, so the class is published. confirm_available_utc is the same published clock read on the session of the bar that completed the leg, and it is the column a point-in-time consumer must use; it is not named under clocks because that mapping holds one column per class and available_utc is the file's primary availability column. The bar instants are not availability: an hourly bar carries the quotes' own clocks (mcx_quotes states exact or published per row) and a daily bar carries the session's opening instant, inside which the Bhav Copy high and low printed at an unknown time, and confirm_utc is a bar instant of that kind."
+      },
+      "lane": "swings",
+      "meta_path": "swings/swing_sessions.meta.json",
+      "path": "swings/swing_sessions.parquet",
+      "rows": 5832,
+      "sha256": "793c2c91128d2296704b044aa168aca16b5fe6565330d9fb746b15241586032c"
+    },
+    {
+      "bytes": 69258,
+      "clock_quality": {
+        "clocks": {
+          "published": "available_utc"
+        },
+        "file": "published",
+        "row_column": "clock_quality",
+        "rows": {
+          "published": 2107
+        },
+        "rule": "A swing row's availability is the settlement publication of the session its extreme printed in: that session's close instant from mcx_sessions, the same convention mcx_daily uses. The exchange publishes at or after the close and we did not capture at that instant, so the class is published. confirm_available_utc is the same published clock read on the session of the bar that completed the leg, and it is the column a point-in-time consumer must use; it is not named under clocks because that mapping holds one column per class and available_utc is the file's primary availability column. The bar instants are not availability: an hourly bar carries the quotes' own clocks (mcx_quotes states exact or published per row) and a daily bar carries the session's opening instant, inside which the Bhav Copy high and low printed at an unknown time, and confirm_utc is a bar instant of that kind."
+      },
+      "lane": "swings",
+      "meta_path": "swings/swings.meta.json",
+      "path": "swings/swings.parquet",
+      "rows": 2107,
+      "sha256": "6f2641ff9167532fd99bdbad3168b4642ecfb72cee19f495d96d93363b993779"
+    }
+  ],
+  "git": {
+    "built_utc": "2026-10-05T02:48:56.089397+00:00",
+    "command": "python -m swing_dataset.pack assemble --version v2.0.1 --build-dir build-v2.0.1 --previous v2.0 --correction swings/swings.parquet=rebuilt from the quotes to 25 Sep, where v2.0 used the quotes to 15 Sep: 13 legs of v2.0 are replaced by 15, all with turn and extreme between 14 and 24 Sep --correction swings/swing_sessions.parquet=rebuilt from the quotes to 25 Sep, where v2.0 used the quotes to 15 Sep: 36 rows of the sessions 15 to 25 Sep differ, and from 16 Sep they use hourly bars where v2.0 used daily bars",
+    "commit": "90800284fbc0c3e7ecd25efa52e6574ba10fb760"
+  },
+  "lanes": {
+    "calendar": {
+      "files": 3,
+      "status": "present"
+    },
+    "labels": {
+      "files": 4,
+      "status": "present"
+    },
+    "macro": {
+      "files": 7,
+      "status": "present"
+    },
+    "mcx": {
+      "files": 2,
+      "status": "present"
+    },
+    "pack": {
+      "files": 14,
+      "status": "present"
+    },
+    "swings": {
+      "files": 2,
+      "status": "present"
+    }
+  },
+  "version": "v2.0.1"
+}

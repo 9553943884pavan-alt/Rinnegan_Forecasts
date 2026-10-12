@@ -1,0 +1,95 @@
+{
+  "stem": "c1_holdout",
+  "rules_version": "2.6",
+  "arguments": {
+    "pack": "pack/v2.0.1",
+    "challenge": 1,
+    "period": "holdout",
+    "frozen": false,
+    "out": "./template/predictions",
+    "start": null,
+    "end": null,
+    "train_end": null,
+    "horizons": "5,10"
+  },
+  "submission_commit": null,
+  "model": {
+    "class": "SwingDetector",
+    "seed": 20260919,
+    "training_data_cutoff": "none; the rule refits at every instant from rows published before it"
+  },
+  "pack": {
+    "root": "pack/v2.0.1",
+    "version": "v2.0.1",
+    "built_utc": "2026-10-05T02:48:56.084607+00:00",
+    "manifest_sha256": "3f3ff527078fbaabf3d76bac70aee38eb1ee87f0a32c8dd84c65aa64c883e97a",
+    "files": 32
+  },
+  "run": {
+    "challenge": 1,
+    "period": {
+      "name": "holdout",
+      "start": "2026-06-01",
+      "end": "2026-12-31",
+      "train_end_utc": "2026-06-01T03:00:00+00:00"
+    },
+    "frozen": false,
+    "horizons": [
+      5,
+      10
+    ],
+    "sessions": 85,
+    "first_session": "2026-06-01",
+    "last_session": "2026-09-25",
+    "rows": 437,
+    "signals": 194,
+    "no_signals": 243,
+    "updates": 52,
+    "outcomes_delivered": 180,
+    "stopped_at": "2026-09-28",
+    "fit_seconds": 0.0,
+    "loop_seconds": 92.293
+  },
+  "rows": {
+    "rows": 437,
+    "signals": 194,
+    "no_signals": 243,
+    "by_horizon": {
+      "5": 97,
+      "10": 97
+    },
+    "by_asset": {
+      "copper": 54,
+      "crude": 50,
+      "gold": 48,
+      "silver": 42
+    },
+    "by_direction": {
+      "down": 98,
+      "up": 96
+    },
+    "no_signals_by_asset": {
+      "silver": 64,
+      "gold": 61,
+      "crude": 60,
+      "copper": 58
+    }
+  },
+  "fit": {
+    "model": "SwingDetector",
+    "train_end_utc": "2026-06-01T03:00:00+00:00",
+    "fitted": false,
+    "note": "the range-break trigger and its target refit at every instant"
+  },
+  "read_log": {
+    "path": "c1_holdout.readlog.jsonl",
+    "entries": 574
+  },
+  "validation": {
+    "ok": true,
+    "errors": [],
+    "warnings": []
+  },
+  "seconds": 92.342,
+  "python": "3.13.12"
+}

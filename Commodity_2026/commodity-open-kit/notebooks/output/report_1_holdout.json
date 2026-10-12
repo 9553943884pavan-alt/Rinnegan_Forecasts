@@ -1,0 +1,644 @@
+{
+  "challenge": 1,
+  "rules_version": "2.6",
+  "window": {
+    "period": "holdout",
+    "start_utc": "2026-06-01T00:00:00+00:00",
+    "end_utc": "2026-09-25T18:00:00+00:00",
+    "horizons_scored": [
+      5,
+      10
+    ],
+    "episode_horizon": 10
+  },
+  "scores": {
+    "catch_rate": {
+      "value": 25.13368983957219,
+      "ci_lo": 21.26436781609195,
+      "ci_hi": 29.327642791340395,
+      "level": 0.9,
+      "n": 187,
+      "n_episodes": 34,
+      "n_boot": 2000,
+      "seed": 0,
+      "resamples_used": 2000
+    },
+    "correctness": {
+      "value": 51.09289617486339,
+      "ci_lo": 46.11376565976318,
+      "ci_hi": 56.220795743696506,
+      "level": 0.9,
+      "n": 366,
+      "n_episodes": 35,
+      "n_boot": 2000,
+      "seed": 0,
+      "resamples_used": 2000
+    },
+    "depth": {
+      "value": 64.1711229946524,
+      "ci_lo": 56.17977528089888,
+      "ci_hi": 71.29873294346977,
+      "level": 0.9,
+      "n": 187,
+      "n_episodes": 33,
+      "n_boot": 2000,
+      "seed": 0,
+      "resamples_used": 2000
+    },
+    "success_rate": {
+      "value": 46.79923633636266,
+      "ci_lo": 42.656001431040934,
+      "ci_hi": 50.848492707209495,
+      "level": 0.9,
+      "n": 187,
+      "n_episodes": 35,
+      "n_boot": 2000,
+      "seed": 0,
+      "resamples_used": 2000
+    }
+  },
+  "counts": {
+    "signals_in_window": 390,
+    "invalid": 0,
+    "unmatured": 13,
+    "scored": 377,
+    "no_price": 0,
+    "ambiguous_bar": 2,
+    "scored_on_incomplete_window": 17,
+    "tick_priced": 268,
+    "decided": 366,
+    "undecided": 11,
+    "undecided_share": 0.029177718832891247,
+    "recorded_not_scored_other_horizon": 0,
+    "correct": 187,
+    "deep": 120,
+    "swings_in_window": 187,
+    "swings_caught": 47,
+    "swings_straddling_window_start": 4,
+    "swings_straddling_window_end": 0,
+    "swings_outside_window": 1916,
+    "signal_rows": 390,
+    "valid_signal_rows": 390,
+    "invalid_signal_rows": 0,
+    "invalid_reasons": {},
+    "no_signal_rows": 145,
+    "valid_no_signal_rows": 145
+  },
+  "coverage": {
+    "floor": 0.9,
+    "rule": "a valid signal row or a valid no_signal row on at least 90 percent of the asset's sessions in the window",
+    "per_asset": {
+      "copper": {
+        "sessions": 85,
+        "sessions_with_a_decision": 85,
+        "share": 1.0,
+        "met": true
+      },
+      "crude": {
+        "sessions": 85,
+        "sessions_with_a_decision": 85,
+        "share": 1.0,
+        "met": true
+      },
+      "gold": {
+        "sessions": 85,
+        "sessions_with_a_decision": 85,
+        "share": 1.0,
+        "met": true
+      },
+      "silver": {
+        "sessions": 85,
+        "sessions_with_a_decision": 85,
+        "share": 1.0,
+        "met": true
+      }
+    },
+    "pooled": {
+      "sessions": 340,
+      "sessions_with_a_decision": 340,
+      "share": 1.0,
+      "met": true
+    },
+    "decision_records": 535,
+    "decision_records_outside_a_session": 0,
+    "met": true
+  },
+  "ten_large_swings": {
+    "rule": "the 10 realized swings of the window with the largest move from turn to extreme divided by the asset's threshold, ties to the earlier turn and then the asset name, each caught or not exactly as for the catch rate; on the holdout at least 7 must be caught, on the forward window the check does not apply",
+    "top": 10,
+    "required": 7,
+    "swings_ranked": 10,
+    "caught": 10,
+    "swings": [
+      {
+        "rank": 1,
+        "asset": "crude",
+        "direction": "down",
+        "turn_utc": "2026-06-10T03:30:00+00:00",
+        "extreme_utc": "2026-06-16T03:30:00+00:00",
+        "move_pct": -18.92632781267847,
+        "threshold_pct": 3.0,
+        "threshold_multiple": 6.308775937559489,
+        "caught": true,
+        "caught_by_signal_utc": "2026-06-15T03:00:00+00:00"
+      },
+      {
+        "rank": 2,
+        "asset": "gold",
+        "direction": "up",
+        "turn_utc": "2026-08-03T03:30:00+00:00",
+        "extreme_utc": "2026-08-12T13:30:00+00:00",
+        "move_pct": 9.28661616161616,
+        "threshold_pct": 1.5,
+        "threshold_multiple": 6.19107744107744,
+        "caught": true,
+        "caught_by_signal_utc": "2026-08-05T03:00:00+00:00"
+      },
+      {
+        "rank": 3,
+        "asset": "crude",
+        "direction": "up",
+        "turn_utc": "2026-09-04T13:30:00+00:00",
+        "extreme_utc": "2026-09-11T03:30:00+00:00",
+        "move_pct": 18.13298316819864,
+        "threshold_pct": 3.0,
+        "threshold_multiple": 6.04432772273288,
+        "caught": true,
+        "caught_by_signal_utc": "2026-09-08T03:00:00+00:00"
+      },
+      {
+        "rank": 4,
+        "asset": "crude",
+        "direction": "down",
+        "turn_utc": "2026-07-23T17:30:00+00:00",
+        "extreme_utc": "2026-07-28T16:30:00+00:00",
+        "move_pct": -17.58666372267609,
+        "threshold_pct": 3.0,
+        "threshold_multiple": 5.86222124089203,
+        "caught": true,
+        "caught_by_signal_utc": "2026-07-28T03:00:00+00:00"
+      },
+      {
+        "rank": 5,
+        "asset": "silver",
+        "direction": "down",
+        "turn_utc": "2026-06-22T12:30:00+00:00",
+        "extreme_utc": "2026-06-24T17:30:00+00:00",
+        "move_pct": -11.008451271044335,
+        "threshold_pct": 2.0,
+        "threshold_multiple": 5.504225635522167,
+        "caught": true,
+        "caught_by_signal_utc": "2026-06-24T03:00:00+00:00"
+      },
+      {
+        "rank": 6,
+        "asset": "silver",
+        "direction": "down",
+        "turn_utc": "2026-06-04T03:30:00+00:00",
+        "extreme_utc": "2026-06-08T03:30:00+00:00",
+        "move_pct": -10.73039581777446,
+        "threshold_pct": 2.0,
+        "threshold_multiple": 5.36519790888723,
+        "caught": true,
+        "caught_by_signal_utc": "2026-06-08T03:00:00+00:00"
+      },
+      {
+        "rank": 7,
+        "asset": "silver",
+        "direction": "up",
+        "turn_utc": "2026-08-03T13:30:00+00:00",
+        "extreme_utc": "2026-08-07T12:30:00+00:00",
+        "move_pct": 10.14781551127327,
+        "threshold_pct": 2.0,
+        "threshold_multiple": 5.073907755636635,
+        "caught": true,
+        "caught_by_signal_utc": "2026-08-05T03:00:00+00:00"
+      },
+      {
+        "rank": 8,
+        "asset": "gold",
+        "direction": "up",
+        "turn_utc": "2026-08-19T04:30:00+00:00",
+        "extreme_utc": "2026-08-24T13:30:00+00:00",
+        "move_pct": 7.409749292726491,
+        "threshold_pct": 1.5,
+        "threshold_multiple": 4.939832861817661,
+        "caught": true,
+        "caught_by_signal_utc": "2026-08-20T03:00:00+00:00"
+      },
+      {
+        "rank": 9,
+        "asset": "silver",
+        "direction": "down",
+        "turn_utc": "2026-06-17T03:30:00+00:00",
+        "extreme_utc": "2026-06-19T03:30:00+00:00",
+        "move_pct": -9.65777480370457,
+        "threshold_pct": 2.0,
+        "threshold_multiple": 4.828887401852285,
+        "caught": true,
+        "caught_by_signal_utc": "2026-06-19T03:00:00+00:00"
+      },
+      {
+        "rank": 10,
+        "asset": "silver",
+        "direction": "up",
+        "turn_utc": "2026-06-10T03:30:00+00:00",
+        "extreme_utc": "2026-06-15T03:30:00+00:00",
+        "move_pct": 9.516567504340594,
+        "threshold_pct": 2.0,
+        "threshold_multiple": 4.758283752170297,
+        "caught": true,
+        "caught_by_signal_utc": "2026-06-12T03:00:00+00:00"
+      }
+    ]
+  },
+  "diagnostics": {
+    "large_swing_catch_rate": {
+      "decides": "nothing on its own. It is reported for the one-to-one call of section 4a and is left out of the success rate and of award_conditions",
+      "definition": "swings caught divided by realized swings in the window, over the legs whose move is at least 2 times the asset's threshold. Caught, the window and the episode blocks mean what they mean for the scored catch rate",
+      "multiple": 2,
+      "threshold_pct": {
+        "gold": 1.5,
+        "silver": 2.0,
+        "copper": 1.5,
+        "crude": 3.0
+      },
+      "large_move_pct": {
+        "gold": 3.0,
+        "silver": 4.0,
+        "copper": 3.0,
+        "crude": 6.0
+      },
+      "rate": {
+        "value": 51.76470588235295,
+        "ci_lo": 43.68570543276182,
+        "ci_hi": 60.215664711632456,
+        "level": 0.9,
+        "n": 85,
+        "n_episodes": 33,
+        "n_boot": 2000,
+        "seed": 0,
+        "resamples_used": 2000
+      },
+      "large_swings": 85,
+      "large_swings_caught": 44,
+      "swings_in_window": 187,
+      "swings_caught": 47,
+      "catch_rate_all_swings": 25.13368983957219
+    }
+  },
+  "baselines": {
+    "range_break": {
+      "episode_horizon": 10,
+      "scores": {
+        "catch_rate": {
+          "value": 25.13368983957219,
+          "ci_lo": 21.26436781609195,
+          "ci_hi": 29.327642791340395,
+          "level": 0.9,
+          "n": 187,
+          "n_episodes": 34,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "correctness": {
+          "value": 51.09289617486339,
+          "ci_lo": 46.11376565976318,
+          "ci_hi": 56.220795743696506,
+          "level": 0.9,
+          "n": 366,
+          "n_episodes": 35,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "depth": {
+          "value": 64.1711229946524,
+          "ci_lo": 56.17977528089888,
+          "ci_hi": 71.29873294346977,
+          "level": 0.9,
+          "n": 187,
+          "n_episodes": 33,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "success_rate": {
+          "value": 46.79923633636266,
+          "ci_lo": 42.656001431040934,
+          "ci_hi": 50.848492707209495,
+          "level": 0.9,
+          "n": 187,
+          "n_episodes": 35,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        }
+      },
+      "counts": {
+        "signals_in_window": 390,
+        "invalid": 0,
+        "unmatured": 13,
+        "scored": 377,
+        "no_price": 0,
+        "ambiguous_bar": 2,
+        "scored_on_incomplete_window": 17,
+        "tick_priced": 268,
+        "decided": 366,
+        "undecided": 11,
+        "undecided_share": 0.029177718832891247,
+        "recorded_not_scored_other_horizon": 0,
+        "correct": 187,
+        "deep": 120,
+        "swings_in_window": 187,
+        "swings_caught": 47,
+        "swings_straddling_window_start": 4,
+        "swings_straddling_window_end": 0,
+        "swings_outside_window": 1916,
+        "signal_rows": 390,
+        "valid_signal_rows": 390,
+        "invalid_signal_rows": 0,
+        "invalid_reasons": {},
+        "no_signal_rows": 145,
+        "valid_no_signal_rows": 145
+      },
+      "coverage": {
+        "pooled": {
+          "sessions": 340,
+          "sessions_with_a_decision": 340,
+          "share": 1.0,
+          "met": true
+        },
+        "met": true
+      },
+      "diagnostics": {
+        "large_swing_catch_rate": {
+          "decides": "nothing on its own. It is reported for the one-to-one call of section 4a and is left out of the success rate and of award_conditions",
+          "definition": "swings caught divided by realized swings in the window, over the legs whose move is at least 2 times the asset's threshold. Caught, the window and the episode blocks mean what they mean for the scored catch rate",
+          "multiple": 2,
+          "threshold_pct": {
+            "gold": 1.5,
+            "silver": 2.0,
+            "copper": 1.5,
+            "crude": 3.0
+          },
+          "large_move_pct": {
+            "gold": 3.0,
+            "silver": 4.0,
+            "copper": 3.0,
+            "crude": 6.0
+          },
+          "rate": {
+            "value": 51.76470588235295,
+            "ci_lo": 43.68570543276182,
+            "ci_hi": 60.215664711632456,
+            "level": 0.9,
+            "n": 85,
+            "n_episodes": 33,
+            "n_boot": 2000,
+            "seed": 0,
+            "resamples_used": 2000
+          },
+          "large_swings": 85,
+          "large_swings_caught": 44,
+          "swings_in_window": 187,
+          "swings_caught": 47,
+          "catch_rate_all_swings": 25.13368983957219
+        }
+      }
+    },
+    "stretch_reversal": {
+      "episode_horizon": 10,
+      "scores": {
+        "catch_rate": {
+          "value": 8.02139037433155,
+          "ci_lo": 5.113056586270872,
+          "ci_hi": 11.11111111111111,
+          "level": 0.9,
+          "n": 187,
+          "n_episodes": 34,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "correctness": {
+          "value": 46.666666666666664,
+          "ci_lo": 35.714285714285715,
+          "ci_hi": 61.36363636363637,
+          "level": 0.9,
+          "n": 120,
+          "n_episodes": 23,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "depth": {
+          "value": 50.0,
+          "ci_lo": 36.20210727969348,
+          "ci_hi": 63.63636363636363,
+          "level": 0.9,
+          "n": 56,
+          "n_episodes": 18,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        },
+        "success_rate": {
+          "value": 34.89601901366607,
+          "ci_lo": 28.22082060755791,
+          "ci_hi": 42.00086024062794,
+          "level": 0.9,
+          "n": 56,
+          "n_episodes": 34,
+          "n_boot": 2000,
+          "seed": 0,
+          "resamples_used": 2000
+        }
+      },
+      "counts": {
+        "signals_in_window": 124,
+        "invalid": 0,
+        "unmatured": 0,
+        "scored": 124,
+        "no_price": 0,
+        "ambiguous_bar": 2,
+        "scored_on_incomplete_window": 3,
+        "tick_priced": 76,
+        "decided": 120,
+        "undecided": 4,
+        "undecided_share": 0.03225806451612903,
+        "recorded_not_scored_other_horizon": 0,
+        "correct": 56,
+        "deep": 28,
+        "swings_in_window": 187,
+        "swings_caught": 15,
+        "swings_straddling_window_start": 4,
+        "swings_straddling_window_end": 0,
+        "swings_outside_window": 1916,
+        "signal_rows": 124,
+        "valid_signal_rows": 124,
+        "invalid_signal_rows": 0,
+        "invalid_reasons": {},
+        "no_signal_rows": 278,
+        "valid_no_signal_rows": 278
+      },
+      "coverage": {
+        "pooled": {
+          "sessions": 340,
+          "sessions_with_a_decision": 340,
+          "share": 1.0,
+          "met": true
+        },
+        "met": true
+      },
+      "diagnostics": {
+        "large_swing_catch_rate": {
+          "decides": "nothing on its own. It is reported for the one-to-one call of section 4a and is left out of the success rate and of award_conditions",
+          "definition": "swings caught divided by realized swings in the window, over the legs whose move is at least 2 times the asset's threshold. Caught, the window and the episode blocks mean what they mean for the scored catch rate",
+          "multiple": 2,
+          "threshold_pct": {
+            "gold": 1.5,
+            "silver": 2.0,
+            "copper": 1.5,
+            "crude": 3.0
+          },
+          "large_move_pct": {
+            "gold": 3.0,
+            "silver": 4.0,
+            "copper": 3.0,
+            "crude": 6.0
+          },
+          "rate": {
+            "value": 10.588235294117647,
+            "ci_lo": 6.020510613884106,
+            "ci_hi": 15.384615384615385,
+            "level": 0.9,
+            "n": 85,
+            "n_episodes": 33,
+            "n_boot": 2000,
+            "seed": 0,
+            "resamples_used": 2000
+          },
+          "large_swings": 85,
+          "large_swings_caught": 9,
+          "swings_in_window": 187,
+          "swings_caught": 15,
+          "catch_rate_all_swings": 8.02139037433155
+        }
+      }
+    }
+  },
+  "award_conditions": {
+    "period": "holdout",
+    "horizons_scored": [
+      5,
+      10
+    ],
+    "minimum_success_rate": 70.0,
+    "success_rate": 46.79923633636266,
+    "success_rate_at_least_minimum": false,
+    "coverage_floor_met": true,
+    "minimum_met_this_period": false,
+    "requires_both_periods": "the minimum must hold on the holdout and on the forward window; join two reports with `award`",
+    "gates": {
+      "success_rate": {
+        "value": 46.79923633636266,
+        "threshold": 70.0,
+        "met": false,
+        "applicable": true
+      },
+      "correctness": {
+        "value": 51.09289617486339,
+        "threshold": 60.0,
+        "met": false,
+        "applicable": true
+      },
+      "depth": {
+        "value": 64.1711229946524,
+        "threshold": 60.0,
+        "met": true,
+        "applicable": true
+      },
+      "coverage_floor": {
+        "value": 1.0,
+        "threshold": 0.9,
+        "met": true,
+        "applicable": true
+      },
+      "ten_large_swings": {
+        "value": 10,
+        "threshold": 7,
+        "met": true,
+        "applicable": true
+      }
+    }
+  },
+  "inputs": {
+    "signals": {
+      "path": "output/baseline_1_range_break_holdout.parquet",
+      "sha256": "0910405856fdcff6d9bc98dfb00e409ae22d6a1707a1ae481c86f521a7818b8c",
+      "bytes": 16675,
+      "rows": 535
+    },
+    "no_signals": null,
+    "frozen": null,
+    "swings": {
+      "path": "pack/v2.0.1/swings/swings.parquet",
+      "sha256": "6f2641ff9167532fd99bdbad3168b4642ecfb72cee19f495d96d93363b993779",
+      "bytes": 69258,
+      "rows": 2107
+    },
+    "mcx_daily": {
+      "path": "pack/v2.0.1/mcx/mcx_daily.parquet",
+      "sha256": "3641ea0c006cba33b0ca3765577fc9ed0bc26ce95c58784eee78b72737ba003c",
+      "bytes": 4038946,
+      "rows": 156409
+    },
+    "designations": {
+      "path": "pack/v2.0.1/labels/designations.parquet",
+      "sha256": "9ad7709ad8484c4965da9e480dc701bffce5e178b52d532d6bc89122611d31ed",
+      "bytes": 234950,
+      "rows": 17496
+    },
+    "mcx_sessions": {
+      "path": "pack/v2.0.1/mcx/mcx_sessions.parquet",
+      "sha256": "85c2410868aa72d8aa5c9867f0b0b555078c284ec4733c4cb48bc6085ea1c797",
+      "bytes": 16945,
+      "rows": 2191
+    },
+    "quotes": {
+      "path": "pack/v2.0.1/pack/quotes/mcx_quotes.parquet",
+      "sha256": "7d0f1c29535bfa2e346a262b1ef280b14b90b5a95a951c3db4baecef34c15e81",
+      "bytes": 44353023,
+      "rows": 1168993
+    }
+  },
+  "build": {
+    "branch": "unknown",
+    "commit": "unknown",
+    "command": "ipykernel_launcher.py (notebooks/02_baseline_submission.ipynb)"
+  },
+  "definitions": {
+    "price_series": "the contract designated for the signal's session in labels/designations.parquet at horizon 5, held for the whole window so a roll never enters as a calendar spread",
+    "entry_price": "the last price of that contract available at or before signal_utc: the last captured tick or the last published settlement, whichever became available later",
+    "path_resolution": "tick by tick where a session carries at least 5 captured quotes after the signal, session high and low otherwise; inside a session bar the order of two barriers is unknowable, so the adverse one is taken first and the row is flagged",
+    "horizons": "Task 1: 5 or 10 completed MCX sessions; the holdout scores every one; the forward window scores only horizons of at most 5 sessions, and a valid row with a longer horizon is recorded under counts.recorded_not_scored_other_horizon and never scored",
+    "horizon_window": "from signal_utc to the close of the h-th session that closes strictly after it; a signal already decided inside a truncated window is scored, otherwise it is unmatured",
+    "unmatured": "counted, left out of both the numerator and the denominator, still a decision record",
+    "invalid_row": "counted as issued and never correct; not a decision record for coverage. Reasons are listed in counts.invalid_reasons",
+    "episode": "a block of h sessions per asset counted from the window start, h in window.episode_horizon. Task 1: the longest horizon the period scores, 10 on the holdout and 5 on the forward window. Task 2: the longest horizon the entry's valid scored rows use, so an entry at 5 and 10 is drawn in blocks of 10; with no such row the longest baseline horizon the period scores, 10 on the holdout and 5 on the forward window",
+    "confidence_interval": "the 90% percentile interval over 2000 seeded resamples of the shared episode universe; every score in one report is recomputed on the same draw, so the success rate's interval is the interval of the average and not an average of intervals",
+    "coverage_floor": "a valid signal row or a valid no_signal row on at least 90% of the asset's sessions in the window, per asset and pooled",
+    "success_rate": "the plain average of the three scores; null when any of the three has no units",
+    "minimum": "five gates, none averaged with another, each in award_conditions.gates with its value, threshold and result: success rate at or above 70 percent, correctness at or above 60, depth at or above 60, the coverage floor met, and on the holdout at least 7 of the 10 large swings caught (the ten large swings do not apply on the forward window). The minimum must hold on the holdout and on the forward window",
+    "catch_rate": "swings caught divided by realized swings in the window. A swing is caught by a correct signal in its direction issued strictly after the turn and at or before the extreme, with at least 0.5 of the asset's threshold of the move still ahead: the move from the entry price to the swing's extreme price, in percent of the entry price, is at least half the threshold",
+    "correctness": "correct signals divided by decided signals. Correct means the price moved at least the asset's threshold in the signalled direction inside the horizon before it moved invalidation_pct against it; decided means the price touched the threshold level or the invalidation level inside the horizon. An undecided signal is left out and counted apart; an invalid or unpriced row stays in as incorrect",
+    "undecided": "a scored signal whose horizon window completed with neither its threshold nor its invalidation level touched: the market did not settle the call. It is in no score; counts.undecided holds how many and counts.undecided_share their share of the scored signals, beside counts.decided",
+    "depth": "among correct signals, the share that reached target_pct before invalidation_pct and whose target_pct was at least 0.5 of the move to the swing's end. A target never reached fails, and so does one under half the move",
+    "move_to_swing_end": "from the entry price to the furthest point the price reached in the signalled direction before it first turned back a full threshold from its running favorable extreme, or before the horizon ended, whichever came first; a later move after such a turn belongs to the next swing. Walked on the same prices as the barriers, a session bar favorable side first, and recorded per row as swing_end_pct beside mfe_pct, the furthest point of the whole window",
+    "swings_in_window": "swings whose turn and extreme both lie inside the window; the ones straddling either edge are counted separately and never scored",
+    "ten_large_swings": "the 10 realized swings of the window with the largest move from turn to extreme divided by the asset's threshold, ties to the earlier turn and then the asset name, each with whether it was caught, as for the catch rate, and by which signal. On the holdout at least 7 of the 10 must be caught, a gate of award_conditions; on the forward window the check does not apply",
+    "large_swing_catch_rate": "reported and never scored: the catch rate over the legs whose move is at least 2 times the asset's threshold, printed under `diagnostics` with its own interval. It is not averaged into the success rate and does not appear in `award_conditions`; section 3 and step 4 of section 4a say what it is for"
+  }
+}

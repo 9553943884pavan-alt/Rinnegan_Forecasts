@@ -1,0 +1,96 @@
+{
+  "built_utc": "2026-10-11T12:53:58.589390+00:00",
+  "total_rows": 5724,
+  "total_columns": 59,
+  "assets": {
+    "gold": {
+      "rows": 1431,
+      "class_counts": {
+        "no_swing": 599,
+        "up_swing": 507,
+        "down_swing": 325
+      }
+    },
+    "silver": {
+      "rows": 1431,
+      "class_counts": {
+        "no_swing": 556,
+        "up_swing": 465,
+        "down_swing": 410
+      }
+    },
+    "copper": {
+      "rows": 1431,
+      "class_counts": {
+        "no_swing": 600,
+        "up_swing": 456,
+        "down_swing": 375
+      }
+    },
+    "crude": {
+      "rows": 1431,
+      "class_counts": {
+        "no_swing": 580,
+        "down_swing": 432,
+        "up_swing": 419
+      }
+    }
+  },
+  "feature_columns": [
+    "eligible",
+    "p_ref",
+    "sigma_c",
+    "n_returns",
+    "has_features",
+    "ret_1",
+    "ret_5",
+    "ret_20",
+    "rv_20",
+    "stretch_20",
+    "z_1",
+    "z_5",
+    "z_20",
+    "log_rv_20",
+    "oi_1s_change",
+    "oi_5s_change",
+    "oi_class_longs",
+    "oi_class_short_cov",
+    "oi_class_shorts",
+    "oi_class_liquid",
+    "range_ratio",
+    "range_expansion_ratio",
+    "vol_surge_10d",
+    "log_volume",
+    "cot_net_smart_money",
+    "cot_weekly_change",
+    "cot_crowded_trade",
+    "usdinr_fbil",
+    "usdinr_ret_1d",
+    "usdinr_ret_5d",
+    "hl_ret_1d",
+    "hl_ret_5d",
+    "hl_funding",
+    "macro_events_next_24h",
+    "energy_events_next_24h",
+    "inflation_events_next_24h",
+    "central_bank_events_next_24h",
+    "ret_trend_agreement",
+    "oi_momentum_interaction",
+    "volatility_regime",
+    "is_news_exist",
+    "news_count_24h",
+    "finbert_sentiment_mean_24h",
+    "finbert_sentiment_sum_24h",
+    "news_pos_share_24h",
+    "news_neg_share_24h"
+  ],
+  "target_columns": {
+    "boss_classifier": "label",
+    "employee_regressor": [
+      "favorable_mfe_pct",
+      "y_mfe",
+      "y_mae",
+      "y_ret"
+    ]
+  }
+}
