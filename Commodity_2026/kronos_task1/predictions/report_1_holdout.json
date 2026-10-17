@@ -13,9 +13,9 @@
   },
   "scores": {
     "catch_rate": {
-      "value": 52.406417112299465,
-      "ci_lo": 47.44766463286346,
-      "ci_hi": 57.95575435203095,
+      "value": 36.898395721925134,
+      "ci_lo": 32.48665550264273,
+      "ci_hi": 41.17794856636121,
       "level": 0.9,
       "n": 187,
       "n_episodes": 34,
@@ -24,31 +24,31 @@
       "resamples_used": 2000
     },
     "correctness": {
-      "value": 76.04355716878402,
-      "ci_lo": 72.54526901669759,
-      "ci_hi": 79.64451147631925,
+      "value": 52.83446712018141,
+      "ci_lo": 48.443529728275486,
+      "ci_hi": 57.1730416437351,
       "level": 0.9,
-      "n": 551,
+      "n": 441,
       "n_episodes": 35,
       "n_boot": 2000,
       "seed": 0,
       "resamples_used": 2000
     },
     "depth": {
-      "value": 65.15513126491646,
-      "ci_lo": 58.91509907198395,
-      "ci_hi": 71.68439545629573,
+      "value": 65.23605150214593,
+      "ci_lo": 57.26477994112848,
+      "ci_hi": 72.85258924082453,
       "level": 0.9,
-      "n": 419,
+      "n": 233,
       "n_episodes": 35,
       "n_boot": 2000,
       "seed": 0,
       "resamples_used": 2000
     },
     "success_rate": {
-      "value": 64.53503518199999,
-      "ci_lo": 61.29796153360024,
-      "ci_hi": 67.85739756009679,
+      "value": 51.6563047814175,
+      "ci_lo": 48.15162730130673,
+      "ci_hi": 54.897146204061094,
       "level": 0.9,
       "n": 187,
       "n_episodes": 35,
@@ -58,31 +58,31 @@
     }
   },
   "counts": {
-    "signals_in_window": 576,
+    "signals_in_window": 449,
     "invalid": 0,
-    "unmatured": 12,
-    "scored": 564,
+    "unmatured": 0,
+    "scored": 449,
     "no_price": 0,
-    "ambiguous_bar": 0,
-    "scored_on_incomplete_window": 32,
-    "tick_priced": 392,
-    "decided": 551,
-    "undecided": 13,
-    "undecided_share": 0.02304964539007092,
+    "ambiguous_bar": 2,
+    "scored_on_incomplete_window": 20,
+    "tick_priced": 297,
+    "decided": 441,
+    "undecided": 8,
+    "undecided_share": 0.017817371937639197,
     "recorded_not_scored_other_horizon": 0,
-    "correct": 419,
-    "deep": 273,
+    "correct": 233,
+    "deep": 152,
     "swings_in_window": 187,
-    "swings_caught": 98,
+    "swings_caught": 69,
     "swings_straddling_window_start": 4,
     "swings_straddling_window_end": 0,
     "swings_outside_window": 1916,
-    "signal_rows": 576,
-    "valid_signal_rows": 576,
+    "signal_rows": 449,
+    "valid_signal_rows": 449,
     "invalid_signal_rows": 0,
     "invalid_reasons": {},
-    "no_signal_rows": 58,
-    "valid_no_signal_rows": 58
+    "no_signal_rows": 90,
+    "valid_no_signal_rows": 90
   },
   "coverage": {
     "floor": 0.9,
@@ -119,7 +119,7 @@
       "share": 1.0,
       "met": true
     },
-    "decision_records": 634,
+    "decision_records": 539,
     "decision_records_outside_a_session": 0,
     "met": true
   },
@@ -128,7 +128,7 @@
     "top": 10,
     "required": 7,
     "swings_ranked": 10,
-    "caught": 10,
+    "caught": 9,
     "swings": [
       {
         "rank": 1,
@@ -139,8 +139,8 @@
         "move_pct": -18.92632781267847,
         "threshold_pct": 3.0,
         "threshold_multiple": 6.308775937559489,
-        "caught": true,
-        "caught_by_signal_utc": "2026-06-11T03:00:00+00:00"
+        "caught": false,
+        "caught_by_signal_utc": null
       },
       {
         "rank": 2,
@@ -152,7 +152,7 @@
         "threshold_pct": 1.5,
         "threshold_multiple": 6.19107744107744,
         "caught": true,
-        "caught_by_signal_utc": "2026-08-05T03:00:00+00:00"
+        "caught_by_signal_utc": "2026-08-06T03:00:00+00:00"
       },
       {
         "rank": 3,
@@ -164,7 +164,7 @@
         "threshold_pct": 3.0,
         "threshold_multiple": 6.04432772273288,
         "caught": true,
-        "caught_by_signal_utc": "2026-09-07T03:00:00+00:00"
+        "caught_by_signal_utc": "2026-09-08T03:00:00+00:00"
       },
       {
         "rank": 4,
@@ -176,7 +176,7 @@
         "threshold_pct": 3.0,
         "threshold_multiple": 5.86222124089203,
         "caught": true,
-        "caught_by_signal_utc": "2026-07-24T03:00:00+00:00"
+        "caught_by_signal_utc": "2026-07-27T03:00:00+00:00"
       },
       {
         "rank": 5,
@@ -188,7 +188,7 @@
         "threshold_pct": 2.0,
         "threshold_multiple": 5.504225635522167,
         "caught": true,
-        "caught_by_signal_utc": "2026-06-23T03:00:00+00:00"
+        "caught_by_signal_utc": "2026-06-24T03:00:00+00:00"
       },
       {
         "rank": 6,
@@ -200,7 +200,7 @@
         "threshold_pct": 2.0,
         "threshold_multiple": 5.36519790888723,
         "caught": true,
-        "caught_by_signal_utc": "2026-06-05T03:00:00+00:00"
+        "caught_by_signal_utc": "2026-06-08T03:00:00+00:00"
       },
       {
         "rank": 7,
@@ -212,7 +212,7 @@
         "threshold_pct": 2.0,
         "threshold_multiple": 5.073907755636635,
         "caught": true,
-        "caught_by_signal_utc": "2026-08-04T03:00:00+00:00"
+        "caught_by_signal_utc": "2026-08-06T03:00:00+00:00"
       },
       {
         "rank": 8,
@@ -236,7 +236,7 @@
         "threshold_pct": 2.0,
         "threshold_multiple": 4.828887401852285,
         "caught": true,
-        "caught_by_signal_utc": "2026-06-18T03:00:00+00:00"
+        "caught_by_signal_utc": "2026-06-19T03:00:00+00:00"
       },
       {
         "rank": 10,
@@ -270,9 +270,9 @@
         "crude": 6.0
       },
       "rate": {
-        "value": 81.17647058823529,
-        "ci_lo": 74.71264367816092,
-        "ci_hi": 88.57142857142857,
+        "value": 63.52941176470588,
+        "ci_lo": 53.75,
+        "ci_hi": 73.3368794326241,
         "level": 0.9,
         "n": 85,
         "n_episodes": 33,
@@ -281,10 +281,10 @@
         "resamples_used": 2000
       },
       "large_swings": 85,
-      "large_swings_caught": 69,
+      "large_swings_caught": 54,
       "swings_in_window": 187,
-      "swings_caught": 98,
-      "catch_rate_all_swings": 52.406417112299465
+      "swings_caught": 69,
+      "catch_rate_all_swings": 36.898395721925134
     }
   },
   "baselines": {
@@ -536,26 +536,26 @@
       10
     ],
     "minimum_success_rate": 70.0,
-    "success_rate": 64.53503518199999,
+    "success_rate": 51.6563047814175,
     "success_rate_at_least_minimum": false,
     "coverage_floor_met": true,
     "minimum_met_this_period": false,
     "requires_both_periods": "the minimum must hold on the holdout and on the forward window; join two reports with `award`",
     "gates": {
       "success_rate": {
-        "value": 64.53503518199999,
+        "value": 51.6563047814175,
         "threshold": 70.0,
         "met": false,
         "applicable": true
       },
       "correctness": {
-        "value": 76.04355716878402,
+        "value": 52.83446712018141,
         "threshold": 60.0,
-        "met": true,
+        "met": false,
         "applicable": true
       },
       "depth": {
-        "value": 65.15513126491646,
+        "value": 65.23605150214593,
         "threshold": 60.0,
         "met": true,
         "applicable": true
@@ -567,7 +567,7 @@
         "applicable": true
       },
       "ten_large_swings": {
-        "value": 10,
+        "value": 9,
         "threshold": 7,
         "met": true,
         "applicable": true
@@ -577,9 +577,9 @@
   "inputs": {
     "signals": {
       "path": "predictions\\c1_holdout.parquet",
-      "sha256": "967093c9efdc0f405279a72fb7ea9567f57f3c2ef98426fd3fb42fdbf6763ca1",
-      "bytes": 16105,
-      "rows": 634
+      "sha256": "be38ca8e74af354a7ee8bbde7cbd47d4407c30e836408dc649361b8717ff4212",
+      "bytes": 13877,
+      "rows": 539
     },
     "no_signals": null,
     "frozen": null,
@@ -616,7 +616,7 @@
   },
   "build": {
     "branch": "main",
-    "commit": "02e3b61857bc48ec4133fa49cf395a9478e1d401",
+    "commit": "8580b4779424f770ba041183610f72c14af1cfe4",
     "command": "c:\\Users\\Pavan\\Downloads\\Rinnegan_Forecasts\\Commodity_2026\\commodity-open-kit\\tools\\score_holdout.py --pack c:\\Users\\Pavan\\Downloads\\Rinnegan_Forecasts\\Commodity_2026\\commodity-open-pack\\v2.0.1 --predictions predictions --challenge 1"
   },
   "definitions": {

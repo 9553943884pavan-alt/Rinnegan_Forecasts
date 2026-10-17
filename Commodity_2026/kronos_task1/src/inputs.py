@@ -41,7 +41,7 @@ class SeriesData:
 class DataPipeline:
     """Caches point-in-time daily frames per session instant and builds roll-adjusted OHLCV."""
 
-    def __init__(self, pack: PointInTime, max_context: int = 400) -> None:
+    def __init__(self, pack: PointInTime, max_context: int = 60) -> None:
         self.pack = pack
         self.max_context = max_context
         self._cached_asof: datetime | None = None

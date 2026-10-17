@@ -87,9 +87,11 @@ def run_recalibration(
     print(f"5-YEAR CALIBRATION (2021-04-01 to 2026-05-31): {len(calibration_instants)} sessions")
     print("=" * 80)
 
-    pipeline = DataPipeline(pack, max_context=400)
+    pipeline = DataPipeline(pack, max_context=60)
     predictor = RawPathPredictor()
-    forecaster = TrajectoryForecaster(predictor=predictor, max_pred_len=10, sample_count=sample_count)
+    forecaster = TrajectoryForecaster(
+        predictor=predictor, max_pred_len=10, sample_count=sample_count, temperature=0.65, top_p=0.85
+    )
 
     # Pre-generate simulated trajectories and point-in-time momentum indicators
     sim_data: List[dict] = []
@@ -247,10 +249,12 @@ def run_recalibration(
                 "rocket_ret_thresh": r_ret,
                 "rocket_pos_thresh": r_pos,
                 "sample_count": 30,
-                "temperature": 0.8,
-                "top_p": 0.9,
-                "max_context": 400,
+                "temperature": 0.65,
+                "top_p": 0.85,
+                "max_context": 60,
+                "realign_momentum": True,
             }
+
             best_metrics = {
                 "correctness": round(correctness, 2),
                 "depth": round(depth, 2),
