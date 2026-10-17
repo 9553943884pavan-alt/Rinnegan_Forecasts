@@ -2,7 +2,7 @@
 name = "swing-dataset"
 version = "0.1.0"
 description = "Commodity Open 2026 dataset builders: MCX history, calendar, macro, comparators, features, pack."
-requires-python = ">=3.13,<3.14"
+requires-python = ">=3.12,<3.14"
 dependencies = [
     "curl-cffi>=0.10",
     "httpx[http2]>=0.28.1",

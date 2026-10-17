@@ -1,0 +1,20 @@
+{
+  "tau": 0.44,
+  "tau_up": 0.56,
+  "tau_dn": 0.44,
+  "margin": 0.10,
+  "rho": 0.55,
+  "target_ratio": 1.00,
+  "inv_ratio": 1.00,
+  "filter_knife": true,
+  "filter_rocket": true,
+  "knife_ret_thresh": -0.008,
+  "knife_pos_thresh": 0.45,
+  "rocket_ret_thresh": 0.005,
+  "rocket_pos_thresh": 0.60,
+  "realign_momentum": true,
+  "sample_count": 30,
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "max_context": 400
+}

@@ -51,3 +51,9 @@ Commodity_2026/commodity-open-kit/data/lgbm_results/_temp*
 Commodity_2026/commodity-open-kit/data/lgbm_results/temp*
 Commodity_2026/commodity-open-kit/data/test_*
 Commodity_2026/commodity-open-kit/data/cache/
+
+# Large third-party clones & audit read logs
+Kronos-master/
+*.readlog.jsonl
+*.readlog.jsonl*
+
