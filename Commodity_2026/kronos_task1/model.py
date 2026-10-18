@@ -91,10 +91,10 @@ class KronosSwingDetector:
         if self.pack is None:
             raise RuntimeError("fit() must be called before predict()")
 
-        max_ctx = int(self.config.get("max_context", 60))
+        max_ctx = int(self.config.get("max_context", 400))
         sample_count = int(self.config.get("sample_count", 30))
-        temp = float(self.config.get("temperature", 0.65))
-        top_p = float(self.config.get("top_p", 0.85))
+        temp = float(self.config.get("temperature", 0.8))
+        top_p = float(self.config.get("top_p", 0.9))
 
         self.pipeline = DataPipeline(self.pack, max_context=max_ctx)
         self.predictor = RawPathPredictor(max_context=512)

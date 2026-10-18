@@ -12,7 +12,7 @@
     "train_end": null,
     "horizons": "5,10"
   },
-  "submission_commit": "8580b4779424f770ba041183610f72c14af1cfe4",
+  "submission_commit": "c81211c59e63bfa62ad6df7d7a465a9452fe6f59",
   "model": {
     "class": "KronosSwingDetector",
     "seed": 20260919,
@@ -41,38 +41,38 @@
     "sessions": 85,
     "first_session": "2026-06-01",
     "last_session": "2026-09-25",
-    "rows": 539,
-    "signals": 449,
-    "no_signals": 90,
-    "updates": 80,
-    "outcomes_delivered": 446,
+    "rows": 634,
+    "signals": 600,
+    "no_signals": 34,
+    "updates": 83,
+    "outcomes_delivered": 583,
     "stopped_at": "2026-09-28",
-    "fit_seconds": 2.179,
-    "loop_seconds": 253.52
+    "fit_seconds": 2.32,
+    "loop_seconds": 1433.458
   },
   "rows": {
-    "rows": 539,
-    "signals": 449,
-    "no_signals": 90,
+    "rows": 634,
+    "signals": 600,
+    "no_signals": 34,
     "by_horizon": {
-      "10": 247,
-      "5": 202
+      "10": 304,
+      "5": 296
     },
     "by_asset": {
-      "silver": 123,
-      "crude": 122,
-      "gold": 114,
-      "copper": 90
+      "crude": 160,
+      "silver": 153,
+      "gold": 147,
+      "copper": 140
     },
     "by_direction": {
-      "up": 230,
-      "down": 219
+      "down": 336,
+      "up": 264
     },
     "no_signals_by_asset": {
-      "copper": 32,
-      "crude": 22,
-      "gold": 20,
-      "silver": 16
+      "gold": 11,
+      "copper": 10,
+      "silver": 8,
+      "crude": 5
     }
   },
   "fit": {
@@ -83,23 +83,21 @@
     "training_data_cutoff": "2025-06-01",
     "config": {
       "tau": 0.46,
-      "tau_up": 0.56,
-      "tau_dn": 0.44,
       "margin": 0.1,
       "rho": 0.55,
       "target_ratio": 1.0,
       "inv_ratio": 1.0,
       "filter_knife": true,
       "filter_rocket": true,
-      "knife_ret_thresh": -0.008,
+      "knife_ret_thresh": -0.005,
       "knife_pos_thresh": 0.45,
-      "rocket_ret_thresh": 0.005,
-      "rocket_pos_thresh": 0.6,
+      "rocket_ret_thresh": 0.008,
+      "rocket_pos_thresh": 0.65,
       "realign_momentum": true,
       "sample_count": 30,
-      "temperature": 0.65,
-      "top_p": 0.85,
-      "max_context": 60
+      "temperature": 0.8,
+      "top_p": 0.9,
+      "max_context": 400
     }
   },
   "read_log": {
@@ -111,6 +109,6 @@
     "errors": [],
     "warnings": []
   },
-  "seconds": 255.815,
+  "seconds": 1435.974,
   "python": "3.12.10"
 }

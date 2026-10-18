@@ -12,9 +12,9 @@
       "report": "predictions\\report_1_holdout.json",
       "scores": {
         "catch_rate": {
-          "value": 36.898395721925134,
-          "ci_lo": 32.48665550264273,
-          "ci_hi": 41.17794856636121,
+          "value": 52.406417112299465,
+          "ci_lo": 47.44766463286346,
+          "ci_hi": 57.95575435203095,
           "level": 0.9,
           "n": 187,
           "n_episodes": 34,
@@ -23,31 +23,31 @@
           "resamples_used": 2000
         },
         "correctness": {
-          "value": 52.83446712018141,
-          "ci_lo": 48.443529728275486,
-          "ci_hi": 57.1730416437351,
+          "value": 76.04355716878402,
+          "ci_lo": 72.54526901669759,
+          "ci_hi": 79.64451147631925,
           "level": 0.9,
-          "n": 441,
+          "n": 551,
           "n_episodes": 35,
           "n_boot": 2000,
           "seed": 0,
           "resamples_used": 2000
         },
         "depth": {
-          "value": 65.23605150214593,
-          "ci_lo": 57.26477994112848,
-          "ci_hi": 72.85258924082453,
+          "value": 65.15513126491646,
+          "ci_lo": 58.91509907198395,
+          "ci_hi": 71.68439545629573,
           "level": 0.9,
-          "n": 233,
+          "n": 419,
           "n_episodes": 35,
           "n_boot": 2000,
           "seed": 0,
           "resamples_used": 2000
         },
         "success_rate": {
-          "value": 51.6563047814175,
-          "ci_lo": 48.15162730130673,
-          "ci_hi": 54.897146204061094,
+          "value": 64.53503518199999,
+          "ci_lo": 61.29796153360024,
+          "ci_hi": 67.85739756009679,
           "level": 0.9,
           "n": 187,
           "n_episodes": 35,
@@ -57,31 +57,31 @@
         }
       },
       "counts": {
-        "signals_in_window": 449,
+        "signals_in_window": 576,
         "invalid": 0,
-        "unmatured": 0,
-        "scored": 449,
+        "unmatured": 12,
+        "scored": 564,
         "no_price": 0,
-        "ambiguous_bar": 2,
-        "scored_on_incomplete_window": 20,
-        "tick_priced": 297,
-        "decided": 441,
-        "undecided": 8,
-        "undecided_share": 0.017817371937639197,
+        "ambiguous_bar": 0,
+        "scored_on_incomplete_window": 32,
+        "tick_priced": 392,
+        "decided": 551,
+        "undecided": 13,
+        "undecided_share": 0.02304964539007092,
         "recorded_not_scored_other_horizon": 0,
-        "correct": 233,
-        "deep": 152,
+        "correct": 419,
+        "deep": 273,
         "swings_in_window": 187,
-        "swings_caught": 69,
+        "swings_caught": 98,
         "swings_straddling_window_start": 4,
         "swings_straddling_window_end": 0,
         "swings_outside_window": 1916,
-        "signal_rows": 449,
-        "valid_signal_rows": 449,
+        "signal_rows": 576,
+        "valid_signal_rows": 576,
         "invalid_signal_rows": 0,
         "invalid_reasons": {},
-        "no_signal_rows": 90,
-        "valid_no_signal_rows": 90
+        "no_signal_rows": 58,
+        "valid_no_signal_rows": 58
       },
       "coverage": {
         "floor": 0.9,
@@ -118,7 +118,7 @@
           "share": 1.0,
           "met": true
         },
-        "decision_records": 539,
+        "decision_records": 634,
         "decision_records_outside_a_session": 0,
         "met": true
       },
@@ -129,26 +129,26 @@
           10
         ],
         "minimum_success_rate": 70.0,
-        "success_rate": 51.6563047814175,
+        "success_rate": 64.53503518199999,
         "success_rate_at_least_minimum": false,
         "coverage_floor_met": true,
         "minimum_met_this_period": false,
         "requires_both_periods": "the minimum must hold on the holdout and on the forward window; join two reports with `award`",
         "gates": {
           "success_rate": {
-            "value": 51.6563047814175,
+            "value": 64.53503518199999,
             "threshold": 70.0,
             "met": false,
             "applicable": true
           },
           "correctness": {
-            "value": 52.83446712018141,
+            "value": 76.04355716878402,
             "threshold": 60.0,
-            "met": false,
+            "met": true,
             "applicable": true
           },
           "depth": {
-            "value": 65.23605150214593,
+            "value": 65.15513126491646,
             "threshold": 60.0,
             "met": true,
             "applicable": true
@@ -160,7 +160,7 @@
             "applicable": true
           },
           "ten_large_swings": {
-            "value": 9,
+            "value": 10,
             "threshold": 7,
             "met": true,
             "applicable": true
@@ -266,7 +266,7 @@
         "top": 10,
         "required": 7,
         "swings_ranked": 10,
-        "caught": 9,
+        "caught": 10,
         "swings": [
           {
             "rank": 1,
@@ -277,8 +277,8 @@
             "move_pct": -18.92632781267847,
             "threshold_pct": 3.0,
             "threshold_multiple": 6.308775937559489,
-            "caught": false,
-            "caught_by_signal_utc": null
+            "caught": true,
+            "caught_by_signal_utc": "2026-06-11T03:00:00+00:00"
           },
           {
             "rank": 2,
@@ -290,7 +290,7 @@
             "threshold_pct": 1.5,
             "threshold_multiple": 6.19107744107744,
             "caught": true,
-            "caught_by_signal_utc": "2026-08-06T03:00:00+00:00"
+            "caught_by_signal_utc": "2026-08-05T03:00:00+00:00"
           },
           {
             "rank": 3,
@@ -302,7 +302,7 @@
             "threshold_pct": 3.0,
             "threshold_multiple": 6.04432772273288,
             "caught": true,
-            "caught_by_signal_utc": "2026-09-08T03:00:00+00:00"
+            "caught_by_signal_utc": "2026-09-07T03:00:00+00:00"
           },
           {
             "rank": 4,
@@ -314,7 +314,7 @@
             "threshold_pct": 3.0,
             "threshold_multiple": 5.86222124089203,
             "caught": true,
-            "caught_by_signal_utc": "2026-07-27T03:00:00+00:00"
+            "caught_by_signal_utc": "2026-07-24T03:00:00+00:00"
           },
           {
             "rank": 5,
@@ -326,7 +326,7 @@
             "threshold_pct": 2.0,
             "threshold_multiple": 5.504225635522167,
             "caught": true,
-            "caught_by_signal_utc": "2026-06-24T03:00:00+00:00"
+            "caught_by_signal_utc": "2026-06-23T03:00:00+00:00"
           },
           {
             "rank": 6,
@@ -338,7 +338,7 @@
             "threshold_pct": 2.0,
             "threshold_multiple": 5.36519790888723,
             "caught": true,
-            "caught_by_signal_utc": "2026-06-08T03:00:00+00:00"
+            "caught_by_signal_utc": "2026-06-05T03:00:00+00:00"
           },
           {
             "rank": 7,
@@ -350,7 +350,7 @@
             "threshold_pct": 2.0,
             "threshold_multiple": 5.073907755636635,
             "caught": true,
-            "caught_by_signal_utc": "2026-08-06T03:00:00+00:00"
+            "caught_by_signal_utc": "2026-08-04T03:00:00+00:00"
           },
           {
             "rank": 8,
@@ -374,7 +374,7 @@
             "threshold_pct": 2.0,
             "threshold_multiple": 4.828887401852285,
             "caught": true,
-            "caught_by_signal_utc": "2026-06-19T03:00:00+00:00"
+            "caught_by_signal_utc": "2026-06-18T03:00:00+00:00"
           },
           {
             "rank": 10,
@@ -408,9 +408,9 @@
             "crude": 6.0
           },
           "rate": {
-            "value": 63.52941176470588,
-            "ci_lo": 53.75,
-            "ci_hi": 73.3368794326241,
+            "value": 81.17647058823529,
+            "ci_lo": 74.71264367816092,
+            "ci_hi": 88.57142857142857,
             "level": 0.9,
             "n": 85,
             "n_episodes": 33,
@@ -419,10 +419,10 @@
             "resamples_used": 2000
           },
           "large_swings": 85,
-          "large_swings_caught": 54,
+          "large_swings_caught": 69,
           "swings_in_window": 187,
-          "swings_caught": 69,
-          "catch_rate_all_swings": 36.898395721925134
+          "swings_caught": 98,
+          "catch_rate_all_swings": 52.406417112299465
         }
       }
     }
